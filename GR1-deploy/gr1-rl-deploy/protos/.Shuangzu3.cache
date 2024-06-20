@@ -1,0 +1,11 @@
+Webots Proto Cache File version 1.5
+protoFileHash: 2ac2f81ea56c31373206e30017d3547e
+needsRobotAncestor: 1
+baseType: Robot
+slotType: 
+parameters: translation,rotation,name,controller,controllerArgs,customData,supervisor,synchronization,selfCollision,toolSlot
+tags: 
+license:  Apache License 2.0
+licenseUrl:  http://www.apache.org/licenses/LICENSE-2.0
+documentationUrl: 
+info: This\sis\sa\sproto\sfile\sfor\sWebots\sfor\sthe\sShuangzu3\nExtracted\sfrom:\s/home/fugo/Downloads/shuangzu_3/urdf/shuangzu_3.urdf

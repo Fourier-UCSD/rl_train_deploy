@@ -1,0 +1,407 @@
+{
+    "10.10.10.50": {
+        "absolute_pos_zero": 5.05217,
+        "absolute_pos_dir": 1.0,
+        "absolute_pos_gear_ratio": 2.0,
+        "motor_gear_ratio": 31,
+        "motorDir": -1,
+        "c_t_scale": 0.121,
+        "controlConfig": {
+            "pos_gain": 60.0,
+            "vel_gain": 4.0,
+            "vel_integrator_gain": 0.0,
+            "vel_limit": 100.0,
+            "vel_limit_tolerance": 1.0
+        },
+        "d_sysnoise": 0.01,
+        "d_meannoise": 0.0626,
+        "stribeck_para": [
+            0.261428221651552,
+            -1.51101368621037,
+            3.03521568514929,
+            12.8645340863892,
+            0.000706612559332666
+        ],
+        "v_lb": 0.1,
+        "v_ub": 0.2,
+        "frictionnlp": "frictionFF_0"
+    },
+    "10.10.10.51": {
+        "absolute_pos_zero": 5.63239,
+        "absolute_pos_dir": 1.0,
+        "absolute_pos_gear_ratio": 2.773,
+        "motor_gear_ratio": 51,
+        "motorDir": 1,
+        "c_t_scale": 0.067,
+        "controlConfig": {
+            "pos_gain": 50.0,
+            "vel_gain": 1.2,
+            "vel_integrator_gain": 0.0,
+            "vel_limit": 100.0,
+            "vel_limit_tolerance": 1.0
+        },
+        "d_sysnoise": 0.01,
+        "d_meannoise": 0.0287,
+        "stribeck_para": [
+            0.462523219625781,
+            -1.66875996570389,
+            3.31635323042564,
+            302.480542339646,
+            3.01864194094504e-05
+        ],
+        "v_lb": 0.1,
+        "v_ub": 0.2,
+        "frictionnlp": "frictionFF_0"
+    },
+    "10.10.10.52": {
+        "absolute_pos_zero": 3.11513,
+        "absolute_pos_dir": 1.0,
+        "absolute_pos_gear_ratio": 2.514,
+        "motor_gear_ratio": 7,
+        "motorDir": -1,
+        "c_t_scale": 0.26,
+        "controlConfig": {
+            "pos_gain": 30.0,
+            "vel_gain": 9.0,
+            "vel_integrator_gain": 0.0,
+            "vel_limit": 25.0,
+            "vel_limit_tolerance": 100.0
+        },
+        "d_sysnoise": 0.001,
+        "d_meannoise": 0.1111,
+        "stribeck_para": [
+            0.0830997311984046,
+            -1.27211347004498,
+            2.563444306081,
+            39.013630851708,
+            -0.00928614366277205
+        ],
+        "v_lb": 0.1,
+        "v_ub": 0.2,
+        "frictionnlp": "frictionFF_0"
+    },
+    "10.10.10.53": {
+        "absolute_pos_zero": 2.97631,
+        "absolute_pos_dir": -1.0,
+        "absolute_pos_gear_ratio": 1.0,
+        "motor_gear_ratio": 7,
+        "motorDir": 1,
+        "c_t_scale": 0.26,
+        "controlConfig": {
+            "pos_gain": 20.0,
+            "vel_gain": 8.0,
+            "vel_integrator_gain": 0.0,
+            "vel_limit": 25.0,
+            "vel_limit_tolerance": 100.0
+        },
+        "d_sysnoise": 0.001,
+        "d_meannoise": 0.0865,
+        "stribeck_para": [
+            0.0784260875950534,
+            -1.30776650311008,
+            2.61324998608027,
+            22.6252057229163,
+            0.010997240429002
+        ],
+        "v_lb": 0.1,
+        "v_ub": 0.2,
+        "frictionnlp": "frictionFF_0"
+    },
+    "10.10.10.54": {
+        "absolute_pos_zero": 1.76868,
+        "absolute_pos_dir": -1.0,
+        "absolute_pos_gear_ratio": 1.0,
+        "motor_gear_ratio": 51,
+        "motorDir": 1,
+        "c_t_scale": 0.076,
+        "controlConfig": {
+            "pos_gain": 50.0,
+            "vel_gain": 0.1,
+            "vel_integrator_gain": 0.0,
+            "vel_limit": 80.0,
+            "vel_limit_tolerance": 1.0
+        },
+        "d_sysnoise": 0.002,
+        "d_meannoise": 0.0315,
+        "stribeck_para": [
+            0.169365913292213,
+            0.670237311961349,
+            -1.31620798049496,
+            -121.97471401129,
+            -0.000268514864283135
+        ],
+        "v_lb": 0.1,
+        "v_ub": 0.2,
+        "frictionnlp": "frictionFF_0"
+    },
+    "10.10.10.55": {
+        "absolute_pos_zero": 1.74644,
+        "absolute_pos_dir": 1.0,
+        "absolute_pos_gear_ratio": 1.0,
+        "motor_gear_ratio": 51,
+        "motorDir": -1,
+        "c_t_scale": 0.076,
+        "controlConfig": {
+            "pos_gain": 50.0,
+            "vel_gain": 0.1,
+            "vel_integrator_gain": 0.0,
+            "vel_limit": 80.0,
+            "vel_limit_tolerance": 1.0
+        },
+        "d_sysnoise": 0.002,
+        "d_meannoise": 0.0337,
+        "stribeck_para": [
+            0.180548512379215,
+            0.741579188185664,
+            -1.4561616036522,
+            -135.55990685767,
+            -0.000244232151983731
+        ],
+        "v_lb": 0.1,
+        "v_ub": 0.2,
+        "frictionnlp": "frictionFF_0"
+    },
+    "10.10.10.70": {
+        "absolute_pos_zero": 4.71124,
+        "absolute_pos_dir": 1.0,
+        "absolute_pos_gear_ratio": 2.0,
+        "motor_gear_ratio": 31.0,
+        "motorDir": -1.0,
+        "c_t_scale": 0.121,
+        "controlConfig": {
+            "pos_gain": 60.0,
+            "vel_gain": 4.0,
+            "vel_integrator_gain": 0.0,
+            "vel_limit": 100.0,
+            "vel_limit_tolerance": 1.0
+        },
+        "d_sysnoise": 0.01,
+        "d_meannoise": 0.052,
+        "stribeck_para": [
+            0.33143120608527,
+            -1.44723081649037,
+            2.90378034718749,
+            38.6305143097787,
+            0.0117820303507329
+        ],
+        "v_lb": 0.1,
+        "v_ub": 0.2,
+        "frictionnlp": "frictionFF_0"
+    },
+    "10.10.10.71": {
+        "absolute_pos_zero": 2.9648,
+        "absolute_pos_dir": 1.0,
+        "absolute_pos_gear_ratio": 2.773,
+        "motor_gear_ratio": 51.0,
+        "motorDir": 1.0,
+        "c_t_scale": 0.067,
+        "controlConfig": {
+            "pos_gain": 50.0,
+            "vel_gain": 1.2,
+            "vel_integrator_gain": 0.0,
+            "vel_limit": 100.0,
+            "vel_limit_tolerance": 1.0
+        },
+        "d_sysnoise": 0.01,
+        "d_meannoise": 0.091,
+        "stribeck_para": [
+            0.466994609802454,
+            -1.58240307829762,
+            3.1382859144197,
+            164.263336424816,
+            9.70475335386655e-05
+        ],
+        "v_lb": 0.1,
+        "v_ub": 0.2,
+        "frictionnlp": "frictionFF_0"
+    },
+    "10.10.10.72": {
+        "absolute_pos_zero": 1.45536,
+        "absolute_pos_dir": -1.0,
+        "absolute_pos_gear_ratio": 2.514,
+        "motor_gear_ratio": 7.0,
+        "motorDir": 1.0,
+        "c_t_scale": 0.26,
+        "controlConfig": {
+            "pos_gain": 30.0,
+            "vel_gain": 9.0,
+            "vel_integrator_gain": 0.0,
+            "vel_limit": 25.0,
+            "vel_limit_tolerance": 100.0
+        },
+        "d_sysnoise": 0.001,
+        "d_meannoise": 0.0752,
+        "stribeck_para": [
+            0.0788897890469632,
+            -1.19788517850855,
+            2.37540249696095,
+            26.9927865451962,
+            0.00777866380390216
+        ],
+        "v_lb": 0.1,
+        "v_ub": 0.2,
+        "frictionnlp": "frictionFF_0"
+    },
+    "10.10.10.73": {
+        "absolute_pos_zero": 1.40819,
+        "absolute_pos_dir": 1.0,
+        "absolute_pos_gear_ratio": 1.0,
+        "motor_gear_ratio": 7.0,
+        "motorDir": -1.0,
+        "c_t_scale": 0.26,
+        "controlConfig": {
+            "pos_gain": 20.0,
+            "vel_gain": 8.0,
+            "vel_integrator_gain": 0.0,
+            "vel_limit": 25.0,
+            "vel_limit_tolerance": 100.0
+        },
+        "d_sysnoise": 0.001,
+        "d_meannoise": 0.0868,
+        "stribeck_para": [
+            0.0724588991545721,
+            -1.35294800468161,
+            2.75534169660881,
+            8.76004801446916,
+            0.0250107748189133
+        ],
+        "v_lb": 0.1,
+        "v_ub": 0.2,
+        "frictionnlp": "frictionFF_0"
+    },
+    "10.10.10.74": {
+        "absolute_pos_zero": 0.100092,
+        "absolute_pos_dir": 1.0,
+        "absolute_pos_gear_ratio": 1.0,
+        "motor_gear_ratio": 51.0,
+        "motorDir": -1.0,
+        "c_t_scale": 0.076,
+        "controlConfig": {
+            "pos_gain": 50.0,
+            "vel_gain": 0.1,
+            "vel_integrator_gain": 0.0,
+            "vel_limit": 80.0,
+            "vel_limit_tolerance": 1.0
+        },
+        "d_sysnoise": 0.002,
+        "d_meannoise": 0.0208,
+        "stribeck_para": [
+            0.190128808064095,
+            -0.825904533448633,
+            1.65149137191465,
+            139.295566887905,
+            -1.67691912025191e-05
+        ],
+        "v_lb": 0.1,
+        "v_ub": 0.2,
+        "frictionnlp": "frictionFF_0"
+    },
+    "10.10.10.75": {
+        "absolute_pos_zero": 5.95069,
+        "absolute_pos_dir": 1.0,
+        "absolute_pos_gear_ratio": 1.0,
+        "motor_gear_ratio": 51.0,
+        "motorDir": 1.0,
+        "c_t_scale": 0.076,
+        "controlConfig": {
+            "pos_gain": 50.0,
+            "vel_gain": 0.1,
+            "vel_integrator_gain": 0.0,
+            "vel_limit": 80.0,
+            "vel_limit_tolerance": 1.0
+        },
+        "d_sysnoise": 0.002,
+        "d_meannoise": 0.0258,
+        "stribeck_para": [
+            0.165804150382098,
+            -0.76485567805085,
+            1.56533544556008,
+            128.458435488689,
+            -0.000379102741921308
+        ],
+        "v_lb": 0.1,
+        "v_ub": 0.2,
+        "frictionnlp": "frictionFF_0"
+    },
+    "10.10.10.90": {
+        "absolute_pos_zero": 0.0,
+        "absolute_pos_dir": 1.0,
+        "absolute_pos_gear_ratio": 1.0,
+        "motor_gear_ratio": 51.0,
+        "motorDir": -1.0,
+        "c_t_scale": 0.067,
+        "controlConfig": {
+            "pos_gain": 50.0,
+            "vel_gain": 2.4,
+            "vel_integrator_gain": 0.0,
+            "vel_limit": 100.0,
+            "vel_limit_tolerance": 1.0
+        },
+        "d_sysnoise": 0.001,
+        "d_meannoise": 0.0868,
+        "stribeck_para": [
+            0.462523219625781,
+            -1.66875996570389,
+            3.31635323042564,
+            302.480542339646,
+            3.01864194094504e-05
+        ],
+        "v_lb": 0.1,
+        "v_ub": 0.2,
+        "frictionnlp": "frictionFF_0"
+    },
+    "10.10.10.91": {
+        "absolute_pos_zero": 4.17013,
+        "absolute_pos_dir": 1.0,
+        "absolute_pos_gear_ratio": 1.0,
+        "motor_gear_ratio": 51.0,
+        "motorDir": -1.0,
+        "c_t_scale": 0.067,
+        "controlConfig": {
+            "pos_gain": 50.0,
+            "vel_gain": 2.4,
+            "vel_integrator_gain": 0.0,
+            "vel_limit": 100.0,
+            "vel_limit_tolerance": 1.0
+        },
+        "d_sysnoise": 0.002,
+        "d_meannoise": 0.0208,
+        "stribeck_para": [
+            0.190128808064095,
+            -0.825904533448633,
+            1.65149137191465,
+            139.295566887905,
+            -1.67691912025191e-05
+        ],
+        "v_lb": 0.1,
+        "v_ub": 0.2,
+        "frictionnlp": "frictionFF_0"
+    },
+    "10.10.10.92": {
+        "absolute_pos_zero": 1.76369,
+        "absolute_pos_dir": 1.0,
+        "absolute_pos_gear_ratio": 1.0,
+        "motor_gear_ratio": 51.0,
+        "motorDir": -1.0,
+        "c_t_scale": 0.067,
+        "controlConfig": {
+            "pos_gain": 50.0,
+            "vel_gain": 2.4,
+            "vel_integrator_gain": 0.0,
+            "vel_limit": 100.0,
+            "vel_limit_tolerance": 1.0
+        },
+        "d_sysnoise": 0.002,
+        "d_meannoise": 0.0258,
+        "stribeck_para": [
+            0.165804150382098,
+            -0.76485567805085,
+            1.56533544556008,
+            128.458435488689,
+            -0.000379102741921308
+        ],
+        "v_lb": 0.1,
+        "v_ub": 0.2,
+        "frictionnlp": "frictionFF_0"
+    }
+}

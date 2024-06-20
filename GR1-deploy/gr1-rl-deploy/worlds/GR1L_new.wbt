@@ -1,0 +1,1407 @@
+#VRML_SIM R2023b utf8
+
+WorldInfo {
+  CFM 1e-07
+  ERP 0.8
+  basicTimeStep 2
+  contactProperties [
+    ContactProperties {
+      material1 "robot_material"
+      material2 "robot_material"
+      coulombFriction [
+        0.7
+      ]
+      bounce 0.8
+      bounceVelocity 0.003
+      softERP 0.42
+      softCFM 0.000208
+    }
+    ContactProperties {
+      material1 "f"
+      material2 "r"
+      coulombFriction [
+        0.7
+      ]
+      bounce 0.8
+      bounceVelocity 0.003
+      softERP 0.42
+      softCFM 0.000208
+    }
+  ]
+}
+Viewpoint {
+  orientation 0 0 -1 1.5707963267948966
+  position 0.040577561236850496 2.5921899298337374 0.7280892624378577
+  follow "GR1L"
+}
+TexturedBackground {
+  texture "stadium"
+}
+DirectionalLight {
+  direction -1 0 -1
+  intensity 3
+}
+Floor {
+  contactMaterial "f"
+  size 100 100
+  tileSize 1 1
+  appearance Parquetry {
+    type "light strip"
+  }
+}
+DEF GR1L Robot {
+  translation 0 -1.06 0.952
+  rotation 0 0 1 -1.5707953071795862
+  children [
+    Shape {
+      appearance DEF base_material PBRAppearance {
+        baseColor 0.15 0.15 0.15
+        roughness 1
+        metalness 0
+      }
+      geometry DEF base Mesh {
+        url [
+          "../meshes/base.STL"
+        ]
+      }
+      castShadows FALSE
+    }
+    Pose {
+      translation -0.065 0 -0.084
+      rotation 1 0 0 0
+      children [
+        InertialUnit {
+          name "inertial_unit"
+        }
+        Gyro {
+        }
+        Accelerometer {
+        }
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.643137 0 0
+          }
+          geometry Box {
+            size 0.02 0.015 0.006
+          }
+        }
+      ]
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        axis 1 0 1.2e-05
+        anchor -0.047999 0.105004 -0.057493
+      }
+      device [
+        RotationalMotor {
+          name "LLeg1"
+          maxVelocity 12.15
+          minPosition -0.09
+          maxPosition 0.79
+          maxTorque 100
+        }
+        PositionSensor {
+          name "LLeg1_sensor"
+        }
+      ]
+      endPoint Solid {
+        translation -0.047999000592439604 0.1050040000781371 -0.05749295680315585
+        rotation 0.999999999928 0 1.1999999999136001e-05 0
+        children [
+          Shape {
+            appearance DEF LLeg1_material PBRAppearance {
+              baseColor 0.15 0.15 0.15
+              roughness 1
+              metalness 0
+            }
+            geometry DEF LLeg1 Mesh {
+              url [
+                "../meshes/LLeg1.STL"
+              ]
+            }
+            castShadows FALSE
+          }
+          HingeJoint {
+            jointParameters HingeJointParameters {
+              axis 1.2e-05 6.8e-05 1
+              anchor 0.048 0 -0.030499
+            }
+            device [
+              RotationalMotor {
+                name "LLeg2"
+                maxVelocity 16.76
+                minPosition -0.7
+                maxPosition 0.7
+                maxTorque 100
+              }
+              PositionSensor {
+                name "LLeg2_sensor"
+              }
+            ]
+            endPoint Solid {
+              translation 0.047999999999999376 9.454466313760011e-17 -0.030499000000003385
+              rotation 1.1999999971392001e-05 6.7999999837888e-05 0.9999999976160001 0
+              children [
+                Shape {
+                  appearance DEF LLeg2_material PBRAppearance {
+                    baseColor 0.15 0.15 0.15
+                    roughness 1
+                    metalness 0
+                  }
+                  geometry DEF LLeg2 Mesh {
+                    url [
+                      "../meshes/LLeg2.STL"
+                    ]
+                  }
+                  castShadows FALSE
+                }
+                HingeJoint {
+                  jointParameters HingeJointParameters {
+                    axis 0 1 -6.8e-05
+                    anchor 0 0 -0.11
+                  }
+                  device [
+                    RotationalMotor {
+                      name "LLeg3"
+                      maxVelocity 37.38
+                      minPosition -1.75
+                      maxPosition 0.7
+                      maxTorque 225
+                    }
+                    PositionSensor {
+                      name "LLeg3_sensor"
+                    }
+                  ]
+                  endPoint Solid {
+                    translation 1.9337444241800916e-16 1.3877965749434897e-17 -0.10999999999999988
+                    rotation 0 0.9999999976880001 -6.7999999842784e-05 0
+                    children [
+                      Shape {
+                        appearance DEF LLeg3_material PBRAppearance {
+                          baseColor 0.15 0.15 0.15
+                          roughness 1
+                          metalness 0
+                        }
+                        geometry DEF LLeg3 Mesh {
+                          url [
+                            "../meshes/LLeg3.STL"
+                          ]
+                        }
+                        castShadows FALSE
+                      }
+                      HingeJoint {
+                        jointParameters HingeJointParameters {
+                          axis 0 1 6.8e-05
+                          anchor 0 2.5e-05 -0.36
+                        }
+                        device [
+                          RotationalMotor {
+                            name "LLeg4"
+                            maxVelocity 37.38
+                            minPosition -0.09
+                            maxPosition 1.92
+                            maxTorque 225
+                          }
+                          PositionSensor {
+                            name "LLeg4_sensor"
+                          }
+                        ]
+                        endPoint Solid {
+                          translation 8.86894198824216e-16 2.4999999999983345e-05 -0.3600000000000074
+                          rotation 0 0.9999999976880001 6.7999999842784e-05 0
+                          children [
+                            Shape {
+                              appearance DEF LLeg4_material PBRAppearance {
+                                baseColor 0.15 0.15 0.15
+                                roughness 1
+                                metalness 0
+                              }
+                              geometry DEF LLeg4 Mesh {
+                                url [
+                                  "../meshes/LLeg4.STL"
+                                ]
+                              }
+                              castShadows FALSE
+                            }
+                            HingeJoint {
+                              jointParameters HingeJointParameters {
+                                axis 0 1 6.8e-05
+                                anchor 0 2.3e-05 -0.34
+                              }
+                              device [
+                                RotationalMotor {
+                                  name "LLeg5"
+                                  maxVelocity 20.32
+                                  minPosition -1.05
+                                  maxPosition 0.52
+                                  maxTorque 64
+                                }
+                                PositionSensor {
+                                  name "LLeg5_sensor"
+                                }
+                              ]
+                              endPoint Solid {
+                                translation -7.35354326746931e-16 2.299999999996747e-05 -0.3399999999999963
+                                rotation 0 0.9999999976880001 6.7999999842784e-05 0
+                                children [
+                                  Shape {
+                                    appearance DEF LLeg5_material PBRAppearance {
+                                      baseColor 0.15 0.15 0.15
+                                      roughness 1
+                                      metalness 0
+                                    }
+                                    geometry DEF LLeg5 Mesh {
+                                      url [
+                                        "../meshes/LLeg5.STL"
+                                      ]
+                                    }
+                                    castShadows FALSE
+                                  }
+                                  HingeJoint {
+                                    jointParameters HingeJointParameters {
+                                      axis 1 0 1.2e-05
+                                    }
+                                    device [
+                                      RotationalMotor {
+                                        name "LLeg6"
+                                        maxVelocity 20.32
+                                        minPosition -0.44
+                                        maxPosition 0.44
+                                        maxTorque 32
+                                      }
+                                      PositionSensor {
+                                        name "LLeg6_sensor"
+                                      }
+                                    ]
+                                    endPoint Solid {
+                                      translation -4.440892098500626e-16 1.3609366230506657e-30 -1.737778141951032e-40
+                                      rotation 0.999999999928 0 1.1999999999136001e-05 0
+                                      children [
+                                        Shape {
+                                          appearance DEF LLeg6_material PBRAppearance {
+                                            baseColor 0.15 0.15 0.15
+                                            roughness 1
+                                            metalness 0
+                                          }
+                                          geometry DEF LLeg6 Mesh {
+                                            url [
+                                              "../meshes/LLeg6.STL"
+                                            ]
+                                          }
+                                          castShadows FALSE
+                                        }
+                                      ]
+                                      name "LLeg6"
+                                      boundingObject Group {
+                                        children [
+                                          Pose {
+                                            translation 0.05 0.02 -0.035
+                                            rotation 0 1 0 1.5708
+                                            children [
+                                              Cylinder {
+                                                height 0.24
+                                                radius 0.02
+                                              }
+                                            ]
+                                          }
+                                          Pose {
+                                            translation 0.05 -0.02 -0.035
+                                            rotation 0 1 0 1.5708
+                                            children [
+                                              Cylinder {
+                                                height 0.24
+                                                radius 0.02
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                      physics Physics {
+                                        density -1
+                                        mass 0.584
+                                        centerOfMass [
+                                          0.039446 0.000358 -0.038101
+                                        ]
+                                        inertiaMatrix [
+                                          0.00036926 0.0024027 0.0027102
+                                          2.5654e-06 1.6145e-05 -1.171e-06
+                                        ]
+                                      }
+                                    }
+                                  }
+                                ]
+                                name "LLeg5"
+                                physics Physics {
+                                  density -1
+                                  mass 0.080335
+                                  centerOfMass [
+                                    0 0 0
+                                  ]
+                                  inertiaMatrix [
+                                    5.102217e-06 4.397553e-06 4.187995e-06
+                                    -7.75887e-16 1.110506e-11 1.434915e-11
+                                  ]
+                                }
+                              }
+                            }
+                          ]
+                          name "LLeg4"
+                          boundingObject Pose {
+                            translation 0 0 -0.15
+                            children [
+                              Cylinder {
+                                height 0.2
+                                radius 0.05
+                              }
+                            ]
+                          }
+                          physics Physics {
+                            density -1
+                            mass 2.189454
+                            centerOfMass [
+                              0.002431 -3e-05 -0.115542
+                            ]
+                            inertiaMatrix [
+                              0.01611711 0.01627044 0.001136523
+                              -6.425997e-06 -5.817878e-05 -2.414313e-06
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                    name "LLeg3"
+                    physics Physics {
+                      density -1
+                      mass 6.368953
+                      centerOfMass [
+                        0.002849 -0.021688 -0.090886
+                      ]
+                      inertiaMatrix [
+                        0.04247706 0.05323479 0.01346893
+                        1.456121e-05 0.0009724934 -8.006242e-05
+                      ]
+                    }
+                  }
+                }
+              ]
+              name "LLeg2"
+              physics Physics {
+                density -1
+                mass 3.988827
+                centerOfMass [
+                  0.000183 0.046462 -0.103892
+                ]
+                inertiaMatrix [
+                  0.01000894 0.01633105 0.009257713
+                  -4.686593e-05 7.234209e-05 0.0002260823
+                ]
+              }
+            }
+          }
+        ]
+        name "LLeg1"
+        physics Physics {
+          density -1
+          mass 1.143665
+          centerOfMass [
+            0.04163 3.5e-05 -0.002138
+          ]
+          inertiaMatrix [
+            0.001023949 0.0009438991 0.001155695
+            9.950515e-08 5.474751e-05 -1.127243e-06
+          ]
+        }
+      }
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        axis 1 0 1.2e-05
+        anchor -0.047999 -0.104996 -0.057508
+      }
+      device [
+        RotationalMotor {
+          name "RLeg1"
+          maxVelocity 12.15
+          minPosition -0.79
+          maxPosition 0.09
+          maxTorque 100
+        }
+        PositionSensor {
+          name "RLeg1_sensor"
+        }
+      ]
+      endPoint Solid {
+        translation -0.0479990107330714 -0.10499600760650443 -0.05750803870861844
+        rotation 0.999999999928 0 1.1999999999136001e-05 0
+        children [
+          Shape {
+            appearance DEF RLeg1_material PBRAppearance {
+              baseColor 0.15 0.15 0.15
+              roughness 1
+              metalness 0
+            }
+            geometry DEF RLeg1 Mesh {
+              url [
+                "../meshes/RLeg1.STL"
+              ]
+            }
+            castShadows FALSE
+          }
+          HingeJoint {
+            jointParameters HingeJointParameters {
+              axis 1.2e-05 6.8e-05 1
+              anchor 0.048 0 -0.030499
+            }
+            device [
+              RotationalMotor {
+                name "RLeg2"
+                maxVelocity 16.76
+                minPosition -0.7
+                maxPosition 0.7
+                maxTorque 100
+              }
+              PositionSensor {
+                name "RLeg2_sensor"
+              }
+            ]
+            endPoint Solid {
+              translation 0.04800000000000115 -1.4706808281960691e-16 -0.030498999999998944
+              rotation 1.1999999971392001e-05 6.7999999837888e-05 0.9999999976160001 0
+              children [
+                Shape {
+                  appearance DEF RLeg2_material PBRAppearance {
+                    baseColor 0.15 0.15 0.15
+                    roughness 1
+                    metalness 0
+                  }
+                  geometry DEF RLeg2 Mesh {
+                    url [
+                      "../meshes/RLeg2.STL"
+                    ]
+                  }
+                  castShadows FALSE
+                }
+                HingeJoint {
+                  jointParameters HingeJointParameters {
+                    axis 0 1 6.8e-05
+                    anchor 0 0 -0.11
+                  }
+                  device [
+                    RotationalMotor {
+                      name "RLeg3"
+                      maxVelocity 37.38
+                      minPosition -1.75
+                      maxPosition 0.7
+                      maxTorque 225
+                    }
+                    PositionSensor {
+                      name "RLeg3_sensor"
+                    }
+                  ]
+                  endPoint Solid {
+                    translation -1.4892125367996551e-15 5.5506777930696215e-17 -0.10999999999999988
+                    rotation 0 0.9999999976880001 6.7999999842784e-05 0
+                    children [
+                      Shape {
+                        appearance DEF RLeg3_material PBRAppearance {
+                          baseColor 0.15 0.15 0.15
+                          roughness 1
+                          metalness 0
+                        }
+                        geometry DEF RLeg3 Mesh {
+                          url [
+                            "../meshes/RLeg3.STL"
+                          ]
+                        }
+                        castShadows FALSE
+                      }
+                      HingeJoint {
+                        jointParameters HingeJointParameters {
+                          axis 0 1 -6.8e-05
+                          anchor 0 2.5e-05 -0.36
+                        }
+                        device [
+                          RotationalMotor {
+                            name "RLeg4"
+                            maxVelocity 37.38
+                            minPosition -0.09
+                            maxPosition 1.92
+                            maxTorque 225
+                          }
+                          PositionSensor {
+                            name "RLeg4_sensor"
+                          }
+                        ]
+                        endPoint Solid {
+                          translation 1.0670728898885155e-15 2.4999999999913977e-05 -0.35999999999999943
+                          rotation 0 0.9999999976880001 -6.7999999842784e-05 0
+                          children [
+                            Shape {
+                              appearance DEF RLeg4_material PBRAppearance {
+                                baseColor 0.15 0.15 0.15
+                                roughness 1
+                                metalness 0
+                              }
+                              geometry DEF RLeg4 Mesh {
+                                url [
+                                  "../meshes/RLeg4.STL"
+                                ]
+                              }
+                              castShadows FALSE
+                            }
+                            HingeJoint {
+                              jointParameters HingeJointParameters {
+                                axis 0 1 6.8e-05
+                                anchor 0 2.3e-05 -0.34
+                              }
+                              device [
+                                RotationalMotor {
+                                  name "RLeg5"
+                                  maxVelocity 20.32
+                                  minPosition -1.05
+                                  maxPosition 0.52
+                                  maxTorque 64
+                                }
+                                PositionSensor {
+                                  name "RLeg5_sensor"
+                                }
+                              ]
+                              endPoint Solid {
+                                translation -2.2742127896863834e-16 2.3000000000050778e-05 -0.3400000000000034
+                                rotation 0 0.9999999976880001 6.7999999842784e-05 0
+                                children [
+                                  Shape {
+                                    appearance DEF RLeg5_material PBRAppearance {
+                                      baseColor 0.15 0.15 0.15
+                                      roughness 1
+                                      metalness 0
+                                    }
+                                    geometry DEF RLeg5 Mesh {
+                                      url [
+                                        "../meshes/RLeg5.STL"
+                                      ]
+                                    }
+                                    castShadows FALSE
+                                  }
+                                  HingeJoint {
+                                    jointParameters HingeJointParameters {
+                                      axis 1 0 1.2e-05
+                                    }
+                                    device [
+                                      RotationalMotor {
+                                        name "RLeg6"
+                                        maxVelocity 20.32
+                                        minPosition -0.44
+                                        maxPosition 0.44
+                                        maxTorque 32
+                                      }
+                                      PositionSensor {
+                                        name "RLeg6_sensor"
+                                      }
+                                    ]
+                                    endPoint Solid {
+                                      translation -2.2204460492503045e-16 -5.5511151231257217e-17 1.2799443819984783e-26
+                                      rotation 0.999999999928 0 1.1999999999136001e-05 0
+                                      children [
+                                        Shape {
+                                          appearance DEF RLeg6_material PBRAppearance {
+                                            baseColor 0.15 0.15 0.15
+                                            roughness 1
+                                            metalness 0
+                                          }
+                                          geometry DEF RLeg6 Mesh {
+                                            url [
+                                              "../meshes/RLeg6.STL"
+                                            ]
+                                          }
+                                        }
+                                      ]
+                                      name "RLeg6"
+                                      boundingObject Group {
+                                        children [
+                                          Pose {
+                                            translation 0.05 0.02 -0.035
+                                            rotation 0 1 0 1.5708
+                                            children [
+                                              Cylinder {
+                                                height 0.24
+                                                radius 0.02
+                                              }
+                                            ]
+                                          }
+                                          Pose {
+                                            translation 0.05 -0.02 -0.035
+                                            rotation 0 1 0 1.5708
+                                            children [
+                                              Cylinder {
+                                                height 0.24
+                                                radius 0.02
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                      physics Physics {
+                                        density -1
+                                        mass 0.58089
+                                        centerOfMass [
+                                          0.043909 -0.000325 -0.039419
+                                        ]
+                                        inertiaMatrix [
+                                          0.00036865 0.0024886 0.0028008
+                                          -2.4583e-06 2.061e-05 1.0324e-06
+                                        ]
+                                      }
+                                    }
+                                  }
+                                ]
+                                name "RLeg5"
+                                physics Physics {
+                                  density -1
+                                  mass 0.079922
+                                  centerOfMass [
+                                    0 0 0
+                                  ]
+                                  inertiaMatrix [
+                                    5.111224e-06 4.400038e-06 4.179536e-06
+                                    -7.904733e-16 1.131832e-11 1.509717e-11
+                                  ]
+                                }
+                              }
+                            }
+                          ]
+                          name "RLeg4"
+                          boundingObject Pose {
+                            translation 0 0 -0.15
+                            children [
+                              Cylinder {
+                                height 0.2
+                                radius 0.05
+                              }
+                            ]
+                          }
+                          physics Physics {
+                            density -1
+                            mass 2.189466
+                            centerOfMass [
+                              0.002367 4.6e-05 -0.115532
+                            ]
+                            inertiaMatrix [
+                              0.01611819 0.01627058 0.001135585
+                              5.079988e-06 -5.800474e-05 8.200514e-06
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                    name "RLeg3"
+                    physics Physics {
+                      density -1
+                      mass 6.368953
+                      centerOfMass [
+                        0.002842 0.021701 -0.091999
+                      ]
+                      inertiaMatrix [
+                        0.04244834 0.05323475 0.01349767
+                        -1.479273e-05 0.0009842816 7.054319e-05
+                      ]
+                    }
+                  }
+                }
+              ]
+              name "RLeg2"
+              physics Physics {
+                density -1
+                mass 3.988819
+                centerOfMass [
+                  -0.001598 -0.046448 -0.103899
+                ]
+                inertiaMatrix [
+                  0.01000893 0.0163311 0.009257637
+                  6.177076e-05 6.455774e-05 -0.0002251136
+                ]
+              }
+            }
+          }
+        ]
+        name "RLeg1"
+        physics Physics {
+          density -1
+          mass 1.143665
+          centerOfMass [
+            0.04163 3.5e-05 -0.002138
+          ]
+          inertiaMatrix [
+            0.001023949 0.0009438991 0.001155695
+            9.950853e-08 5.474751e-05 -1.127247e-06
+          ]
+        }
+      }
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        axis 0 0.906308 0.422618
+        anchor 0 0.126624 0.363768
+      }
+      device [
+        RotationalMotor {
+          name "LArm1"
+          maxVelocity 8
+          minPosition -2.618
+          maxPosition 0.5236
+          maxTorque 18
+        }
+        PositionSensor {
+          name "LArm1_sensor"
+        }
+      ]
+      endPoint Solid {
+        translation 6.797211497941884e-09 0.12662401063054154 0.36376800473424675
+        rotation 0.9999999999999967 -1.684632624055628e-08 7.951169216019529e-08 0.43633207820180847
+        children [
+          Shape {
+            appearance DEF shoulderPitchLeft_material PBRAppearance {
+              baseColor 0.15 0.15 0.15
+              roughness 1
+              metalness 0
+            }
+            geometry DEF zuo1 Mesh {
+              url [
+                "../meshes/zuo1.STL"
+              ]
+            }
+            castShadows FALSE
+          }
+          HingeJoint {
+            jointParameters HingeJointParameters {
+              anchor 0.032 0.067 0
+            }
+            device [
+              RotationalMotor {
+                name "LArm2"
+                maxVelocity 8
+                minPosition -0.1
+                maxPosition 3.1415926
+                maxTorque 18
+              }
+              PositionSensor {
+                name "LArm2_sensor"
+              }
+            ]
+            endPoint Solid {
+              translation 0.032 0.067 0
+              rotation -1 0 0 2.0071289999999937
+              children [
+                Shape {
+                  appearance DEF shoulderRollLeft_material PBRAppearance {
+                    baseColor 0.15 0.15 0.15
+                    roughness 1
+                    metalness 0
+                  }
+                  geometry DEF zuo2 Mesh {
+                    url [
+                      "../meshes/zuo2.STL"
+                    ]
+                  }
+                  castShadows FALSE
+                }
+                HingeJoint {
+                  jointParameters HingeJointParameters {
+                    axis 0 1 0
+                    anchor -0.032 0.13653 0.04
+                  }
+                  device [
+                    RotationalMotor {
+                      name "LArm3"
+                      maxVelocity 8
+                      minPosition -1.57
+                      maxPosition 1.57
+                      maxTorque 18
+                    }
+                    PositionSensor {
+                      name "LArm3_sensor"
+                    }
+                  ]
+                  endPoint Solid {
+                    translation -0.032 0.13653 0.04
+                    rotation 0 1 0 0
+                    children [
+                      Shape {
+                        appearance DEF shoulderYawLeft_material PBRAppearance {
+                          baseColor 0.15 0.15 0.15
+                          roughness 1
+                          metalness 0
+                        }
+                        geometry DEF zuo3 Mesh {
+                          url [
+                            "../meshes/zuo3.STL"
+                          ]
+                        }
+                        castShadows FALSE
+                      }
+                      HingeJoint {
+                        jointParameters HingeJointParameters {
+                          axis 0 0 1
+                          anchor 0 0.11 0.02253
+                        }
+                        device [
+                          RotationalMotor {
+                            name "LArm4"
+                            maxVelocity 8
+                            minPosition -1.57
+                            maxPosition 0.1
+                            maxTorque 18
+                          }
+                          PositionSensor {
+                            name "LArm4_sensor"
+                          }
+                        ]
+                        endPoint Solid {
+                          translation 0 0.11 0.02253
+                          children [
+                            Shape {
+                              appearance DEF elbowLeft_material PBRAppearance {
+                                baseColor 0.15 0.15 0.15
+                                roughness 1
+                                metalness 0
+                              }
+                              geometry DEF zuo4 Mesh {
+                                url [
+                                  "../meshes/zuo4.STL"
+                                ]
+                              }
+                              castShadows FALSE
+                            }
+                            Solid {
+                              translation 0 0.11903 -0.0225
+                              rotation 0 0 1 7e-05
+                              children [
+                                Shape {
+                                  appearance DEF wristYawLeft_material PBRAppearance {
+                                    baseColor 0.15 0.15 0.15
+                                    roughness 1
+                                    metalness 0
+                                  }
+                                  geometry DEF zuo5 Mesh {
+                                    url [
+                                      "../meshes/zuo5.STL"
+                                    ]
+                                  }
+                                  castShadows FALSE
+                                }
+                                Solid {
+                                  translation 0 0.1225 0.0214
+                                  rotation 0 0 1 6.9e-05
+                                  children [
+                                    Shape {
+                                      appearance DEF wristPitchLeft_material PBRAppearance {
+                                        baseColor 0.15 0.15 0.15
+                                        roughness 1
+                                        metalness 0
+                                      }
+                                      geometry DEF zuo6 Mesh {
+                                        url [
+                                          "../meshes/zuo6.STL"
+                                        ]
+                                      }
+                                      castShadows FALSE
+                                    }
+                                    Solid {
+                                      translation 0.023 0 -0.0214
+                                      rotation 0 0 1 6.9e-05
+                                      children [
+                                        Shape {
+                                          appearance DEF wristRollLeft_material PBRAppearance {
+                                            baseColor 0.15 0.15 0.15
+                                            roughness 1
+                                            metalness 0
+                                          }
+                                          geometry DEF zuo7 Mesh {
+                                            url [
+                                              "../meshes/zuo7.STL"
+                                            ]
+                                          }
+                                          castShadows FALSE
+                                        }
+                                      ]
+                                      name "wristRollLeft"
+                                      physics Physics {
+                                        density -1
+                                        mass 0.028689
+                                        centerOfMass [
+                                          -0.021083 0.018973 0
+                                        ]
+                                        inertiaMatrix [
+                                          9.64e-06 1.483e-05 2.026e-05
+                                          -1.04e-06 0 0
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                  name "wristPitchLeft"
+                                  physics Physics {
+                                    density -1
+                                    mass 0.1716
+                                    centerOfMass [
+                                      0.000316 -0.001301 -0.021172
+                                    ]
+                                    inertiaMatrix [
+                                      3.941e-05 5.228e-05 5.147e-05
+                                      3.18e-06 -6e-08 1.4e-07
+                                    ]
+                                  }
+                                }
+                              ]
+                              name "wristYawLeft"
+                              physics Physics {
+                                density -1
+                                mass 0.338174
+                                centerOfMass [
+                                  1e-05 0.055805 0.000198
+                                ]
+                                inertiaMatrix [
+                                  0.00036885 0.00014206 0.00032478
+                                  4e-08 3e-08 1.71e-06
+                                ]
+                              }
+                            }
+                          ]
+                          name "LArm4"
+                          boundingObject Pose {
+                            translation 0 0.12 -0.02
+                            rotation 1 0 0 1.57
+                            children [
+                              Cylinder {
+                                height 0.17
+                                radius 0.035
+                              }
+                            ]
+                          }
+                          physics Physics {
+                            density -1
+                            mass 0.446956
+                            centerOfMass [
+                              -0.000111 0.087538 -0.020856
+                            ]
+                            inertiaMatrix [
+                              0.00043623 0.00018512 0.0004119
+                              -4e-07 -6e-08 -5.009e-05
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                    name "LArm3"
+                    boundingObject Pose {
+                      translation 0 0.05 0
+                      rotation 1 0 0 1.57
+                      children [
+                        Cylinder {
+                          height 0.09
+                          radius 0.03
+                        }
+                      ]
+                    }
+                    physics Physics {
+                      density -1
+                      mass 0.469749
+                      centerOfMass [
+                        -0.000582 0.086465 0.000515
+                      ]
+                      inertiaMatrix [
+                        0.00082642 0.00016793 0.00081863
+                        -3.84e-06 -1.77e-06 3.32e-06
+                      ]
+                    }
+                  }
+                }
+              ]
+              name "LArm2"
+              boundingObject Pose {
+                translation -0.025 0 0
+                children [
+                  Sphere {
+                    radius 0.04
+                  }
+                ]
+              }
+              physics Physics {
+                density -1
+                mass 0.507666
+                centerOfMass [
+                  -0.026213 0.094873 0.03614
+                ]
+                inertiaMatrix [
+                  0.00092986 0.00032675 0.00092647
+                  -0.00021876 -6.163e-05 0.00017328
+                ]
+              }
+            }
+          }
+        ]
+        name "LArm1"
+        physics Physics {
+          density -1
+          mass 0.771702
+          centerOfMass [
+            0.00544 0.058187 -1.1e-05
+          ]
+          inertiaMatrix [
+            0.000685 0.00041017 0.00064509
+            4.059e-05 6.4e-07 -1.77e-06
+          ]
+        }
+      }
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        axis 0 0.906308 -0.422618
+        anchor 0 -0.126624 0.36375
+      }
+      device [
+        RotationalMotor {
+          name "RArm1"
+          maxVelocity 8
+          minPosition -2.618
+          maxPosition 0.5236
+          maxTorque 18
+        }
+        PositionSensor {
+          name "RArm1_sensor"
+        }
+      ]
+      endPoint Solid {
+        translation 5.4769053511996714e-08 -0.1266240044313761 0.36374998604906766
+        rotation -0.9999999999999318 -7.673192299894661e-08 -3.607590393155423e-07 0.4363321768705549
+        children [
+          Shape {
+            appearance DEF shoulderPitchRight_material PBRAppearance {
+              baseColor 0.15 0.15 0.15
+              roughness 1
+              metalness 0
+            }
+            geometry DEF you1 Mesh {
+              url [
+                "../meshes/you1.STL"
+              ]
+            }
+            castShadows FALSE
+          }
+          HingeJoint {
+            jointParameters HingeJointParameters {
+              anchor 0.032 -0.067 0
+            }
+            device [
+              RotationalMotor {
+                name "RArm2"
+                maxVelocity 8
+                minPosition -3.1415926
+                maxPosition 0.1
+                maxTorque 18
+              }
+              PositionSensor {
+                name "RArm2_sensor"
+              }
+            ]
+            endPoint Solid {
+              translation 0.032 -0.067 0
+              rotation 1 0 0 2.0071289999999937
+              children [
+                Shape {
+                  appearance DEF shoulderRollRight_material PBRAppearance {
+                    baseColor 0.15 0.15 0.15
+                    roughness 1
+                    metalness 0
+                  }
+                  geometry DEF you2 Mesh {
+                    url [
+                      "../meshes/you2.STL"
+                    ]
+                  }
+                  castShadows FALSE
+                }
+                HingeJoint {
+                  jointParameters HingeJointParameters {
+                    axis 0 1 0
+                    anchor -0.032 -0.13653 0.04
+                  }
+                  device [
+                    RotationalMotor {
+                      name "RArm3"
+                      maxVelocity 8
+                      minPosition -1.57
+                      maxPosition 1.57
+                      maxTorque 18
+                    }
+                    PositionSensor {
+                      name "RArm3_sensor"
+                    }
+                  ]
+                  endPoint Solid {
+                    translation -0.032 -0.13653 0.04
+                    rotation 0 1 0 0
+                    children [
+                      Shape {
+                        appearance DEF shoulderYawRight_material PBRAppearance {
+                          baseColor 0.15 0.15 0.15
+                          roughness 1
+                          metalness 0
+                        }
+                        geometry DEF you3 Mesh {
+                          url [
+                            "../meshes/you3.STL"
+                          ]
+                        }
+                        castShadows FALSE
+                      }
+                      HingeJoint {
+                        jointParameters HingeJointParameters {
+                          axis 0 0 1
+                          anchor 0 -0.11 0.02253
+                        }
+                        device [
+                          RotationalMotor {
+                            name "RArm4"
+                            maxVelocity 8
+                            minPosition -0.1
+                            maxPosition 2
+                            maxTorque 18
+                          }
+                          PositionSensor {
+                            name "RArm4_sensor"
+                          }
+                        ]
+                        endPoint Solid {
+                          translation 0 -0.11 0.02253
+                          children [
+                            Shape {
+                              appearance DEF elbowRight_material PBRAppearance {
+                                baseColor 0.15 0.15 0.15
+                                roughness 1
+                                metalness 0
+                              }
+                              geometry DEF you4 Mesh {
+                                url [
+                                  "../meshes/you4.STL"
+                                ]
+                              }
+                              castShadows FALSE
+                            }
+                            Solid {
+                              translation 0 -0.11903 -0.0225
+                              rotation 0 0 1 6.9e-05
+                              children [
+                                Shape {
+                                  appearance DEF wristYawRight_material PBRAppearance {
+                                    baseColor 0.15 0.15 0.15
+                                    roughness 1
+                                    metalness 0
+                                  }
+                                  geometry DEF you5 Mesh {
+                                    url [
+                                      "../meshes/you5.STL"
+                                    ]
+                                  }
+                                  castShadows FALSE
+                                }
+                                Solid {
+                                  translation 0 -0.1225 0.0214
+                                  children [
+                                    Shape {
+                                      appearance DEF wristPitchRight_material PBRAppearance {
+                                        baseColor 0.15 0.15 0.15
+                                        roughness 1
+                                        metalness 0
+                                      }
+                                      geometry DEF you6 Mesh {
+                                        url [
+                                          "../meshes/you6.STL"
+                                        ]
+                                      }
+                                      castShadows FALSE
+                                    }
+                                    Solid {
+                                      translation -0.023 0 -0.0214
+                                      children [
+                                        Shape {
+                                          appearance DEF wristRollRight_material PBRAppearance {
+                                            baseColor 0.15 0.15 0.15
+                                            roughness 1
+                                            metalness 0
+                                          }
+                                          geometry DEF you7 Mesh {
+                                            url [
+                                              "../meshes/you7.STL"
+                                            ]
+                                          }
+                                          castShadows FALSE
+                                        }
+                                      ]
+                                      name "wristRollRight"
+                                      physics Physics {
+                                        density -1
+                                        mass 0.028689
+                                        centerOfMass [
+                                          0.021083 -0.018973 0
+                                        ]
+                                        inertiaMatrix [
+                                          9.64e-06 1.483e-05 2.026e-05
+                                          -1.04e-06 0 0
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                  name "wristPitchRight"
+                                  physics Physics {
+                                    density -1
+                                    mass 0.1716
+                                    centerOfMass [
+                                      -0.001029 0.001292 -0.021174
+                                    ]
+                                    inertiaMatrix [
+                                      3.928e-05 4.907e-05 4.825e-05
+                                      3.32e-06 9e-08 -1.4e-07
+                                    ]
+                                  }
+                                }
+                              ]
+                              name "wristYawRight"
+                              physics Physics {
+                                density -1
+                                mass 0.338174
+                                centerOfMass [
+                                  -6e-06 -0.055809 -0.000105
+                                ]
+                                inertiaMatrix [
+                                  0.00036777 0.00014102 0.00032472
+                                  6e-08 -2e-08 -2.57e-06
+                                ]
+                              }
+                            }
+                          ]
+                          name "RArm4"
+                          boundingObject Pose {
+                            translation 0 -0.12 -0.02
+                            rotation 1 0 0 1.57
+                            children [
+                              Cylinder {
+                                height 0.17
+                                radius 0.035
+                              }
+                            ]
+                          }
+                          physics Physics {
+                            density -1
+                            mass 0.446956
+                            centerOfMass [
+                              -0.000108 -0.0875 -0.020856
+                            ]
+                            inertiaMatrix [
+                              0.00043144 0.00018244 0.00040705
+                              4.1e-07 -5e-08 5.007e-05
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                    name "RArm3"
+                    boundingObject Pose {
+                      translation 0 -0.05 0
+                      rotation 1 0 0 1.57
+                      children [
+                        Cylinder {
+                          height 0.09
+                          radius 0.03
+                        }
+                      ]
+                    }
+                    physics Physics {
+                      density -1
+                      mass 0.46975
+                      centerOfMass [
+                        -0.000583 -0.086461 0.000479
+                      ]
+                      inertiaMatrix [
+                        0.00082183 0.00016345 0.00081588
+                        3.87e-06 -1.76e-06 -2.94e-06
+                      ]
+                    }
+                  }
+                }
+              ]
+              name "RArm2"
+              boundingObject Pose {
+                translation -0.025 0 0
+                children [
+                  Sphere {
+                    radius 0.04
+                  }
+                ]
+              }
+              physics Physics {
+                density -1
+                mass 0.507665
+                centerOfMass [
+                  -0.026213 -0.09484 0.036137
+                ]
+                inertiaMatrix [
+                  0.00092464 0.00032406 0.00092133
+                  0.00021867 -6.162e-05 -0.00017321
+                ]
+              }
+            }
+          }
+        ]
+        name "RArm1"
+        physics Physics {
+          density -1
+          mass 0.771702
+          centerOfMass [
+            0.005241 -0.058186 -9e-06
+          ]
+          inertiaMatrix [
+            0.00067837 0.00040297 0.00063796
+            -3.923e-05 6.1e-07 1.79e-06
+          ]
+        }
+      }
+    }
+  ]
+  name "GR1L"
+  boundingObject Group {
+    children [
+      Pose {
+        translation 0 0 -0.06
+        rotation 1 0 0 1.57
+        children [
+          Cylinder {
+            height 0.29
+            radius 0.039
+          }
+        ]
+      }
+      Pose {
+        translation 0 0 0.3
+        children [
+          Cylinder {
+            height 0.2
+            radius 0.1
+          }
+        ]
+      }
+    ]
+  }
+  physics Physics {
+    density -1
+    mass 10
+    centerOfMass [
+      -0.03183 3.5e-05 0.172578
+    ]
+    inertiaMatrix [
+      0.05141562 0.03330727 0.02732154
+      1.7804e-05 -0.0008701077 -4.707436e-06
+    ]
+  }
+  controller "GR1_lite_webots_noarm"
+  supervisor TRUE
+}

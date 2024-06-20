@@ -1,0 +1,1455 @@
+#VRML_SIM R2022b utf8
+# license: Apache License 2.0
+# license url: http://www.apache.org/licenses/LICENSE-2.0
+# This is a proto file for Webots for the Shuangzu3
+# Extracted from: /home/fugo/Downloads/shuangzu_3/urdf/shuangzu_3.urdf
+
+PROTO Shuangzu3 [
+  field  SFVec3f     translation     0 0 0
+  field  SFRotation  rotation        0 0 1 0
+  field  SFString    name            "Shuangzu3"  # Is `Robot.name`.
+  field  SFString    controller      "void"       # Is `Robot.controller`.
+  field  MFString    controllerArgs  []           # Is `Robot.controllerArgs`.
+  field  SFString    customData      ""           # Is `Robot.customData`.
+  field  SFBool      supervisor      FALSE        # Is `Robot.supervisor`.
+  field  SFBool      synchronization TRUE         # Is `Robot.synchronization`.
+  field  SFBool      selfCollision   FALSE        # Is `Robot.selfCollision`.
+  field  MFNode      toolSlot        []           # Extend the robot with new nodes at the end of the arm.
+]
+{
+  Robot {
+    translation IS translation
+    rotation IS rotation
+    controller IS controller
+    controllerArgs IS controllerArgs
+    customData IS customData
+    supervisor IS supervisor
+    synchronization IS synchronization
+    selfCollision IS selfCollision
+    children [
+      Shape {
+        appearance DEF base_material PBRAppearance {
+          baseColor 0.752941 0.752941 0.752941
+          roughness 1.000000
+          metalness 0
+        }
+        geometry DEF base Mesh {
+          url "/home/fugo/Downloads/shuangzu_3/meshes/base.STL"
+        }
+      }
+      DEF r1 HingeJoint {
+        jointParameters HingeJointParameters {
+          axis -1.000000 0.000000 0.000000
+          anchor -0.077000 -0.105000 -0.057500
+        }
+        device [
+          RotationalMotor {
+            name "r1"
+            maxTorque 10000
+          }
+          PositionSensor {
+            name "r1_sensor"
+          }
+        ]
+        endPoint DEF r1 Solid {
+          translation -0.077000 -0.105000 -0.057500
+          children [
+            Shape {
+              appearance DEF r1_material PBRAppearance {
+                roughness 1.000000
+                metalness 0
+              }
+              geometry DEF r1 Mesh {
+                url "/home/fugo/Downloads/shuangzu_3/meshes/r1.STL"
+              }
+            }
+            DEF r2 HingeJoint {
+              jointParameters HingeJointParameters {
+                axis -1.000000 0.000000 0.000000
+                anchor 0.029000 0.000000 0.000000
+              }
+              device [
+                RotationalMotor {
+                  name "r2"
+                  maxTorque 10000
+                }
+                PositionSensor {
+                  name "r2_sensor"
+                }
+              ]
+              endPoint DEF r2 Solid {
+                translation 0.029000 0.000000 0.000000
+                children [
+                  Shape {
+                    appearance DEF r2_material PBRAppearance {
+                      baseColor 0.752940 0.752940 0.752940
+                      roughness 1.000000
+                      metalness 0
+                    }
+                    geometry DEF r2 Mesh {
+                      url "/home/fugo/Downloads/shuangzu_3/meshes/r2.STL"
+                    }
+                  }
+                  DEF r3 HingeJoint {
+                    jointParameters HingeJointParameters {
+                      axis 0.000000 0.000000 1.000000
+                      anchor 0.048000 0.000000 -0.045500
+                    }
+                    device [
+                      RotationalMotor {
+                        name "r3"
+                        maxTorque 10000
+                      }
+                      PositionSensor {
+                        name "r3_sensor"
+                      }
+                    ]
+                    endPoint DEF r3 Solid {
+                      translation 0.048000 0.000000 -0.045500
+                      children [
+                        Shape {
+                          appearance DEF r3_material PBRAppearance {
+                            baseColor 0.752941 0.752941 0.752941
+                            roughness 1.000000
+                            metalness 0
+                          }
+                          geometry DEF r3 Mesh {
+                            url "/home/fugo/Downloads/shuangzu_3/meshes/r3.STL"
+                          }
+                        }
+                        DEF r4 HingeJoint {
+                          jointParameters HingeJointParameters {
+                            axis 0.000000 1.000000 0.000000
+                            anchor 0.000000 0.000000 -0.089000
+                          }
+                          device [
+                            RotationalMotor {
+                              name "r4"
+                              maxTorque 10000
+                            }
+                            PositionSensor {
+                              name "r4_sensor"
+                            }
+                          ]
+                          endPoint DEF r4 Solid {
+                            translation 0.000000 0.000000 -0.089000
+                            children [
+                              Shape {
+                                appearance DEF r4_material PBRAppearance {
+                                  baseColor 0.752940 0.752940 0.752940
+                                  roughness 1.000000
+                                  metalness 0
+                                }
+                                geometry DEF r4 Mesh {
+                                  url "/home/fugo/Downloads/shuangzu_3/meshes/r4.STL"
+                                }
+                              }
+                              DEF r5 HingeJoint {
+                                jointParameters HingeJointParameters {
+                                  axis 0.000000 -1.000000 0.000000
+                                  anchor 0.000000 0.000000 -0.360000
+                                }
+                                device [
+                                  RotationalMotor {
+                                    name "r5"
+                                    maxTorque 10000
+                                  }
+                                  PositionSensor {
+                                    name "r5_sensor"
+                                  }
+                                ]
+                                endPoint DEF r5 Solid {
+                                  translation 0.000000 0.000000 -0.360000
+                                  children [
+                                    Shape {
+                                      appearance DEF r5_material PBRAppearance {
+                                        baseColor 0.752940 0.752940 0.752940
+                                        roughness 1.000000
+                                        metalness 0
+                                      }
+                                      geometry DEF r5 Mesh {
+                                        url "/home/fugo/Downloads/shuangzu_3/meshes/r5.STL"
+                                      }
+                                    }
+                                    DEF r6 HingeJoint {
+                                      jointParameters HingeJointParameters {
+                                        axis 0.000000 1.000000 0.000000
+                                        anchor 0.000000 0.000000 -0.340000
+                                      }
+                                      device [
+                                        RotationalMotor {
+                                          name "r6"
+                                          maxTorque 10000
+                                        }
+                                        PositionSensor {
+                                          name "r6_sensor"
+                                        }
+                                      ]
+                                      endPoint DEF r6 Solid {
+                                        translation 0.000000 0.000000 -0.340000
+                                        children [
+                                          Shape {
+                                            appearance DEF r6_material PBRAppearance {
+                                              baseColor 0.752940 0.752940 0.752940
+                                              roughness 1.000000
+                                              metalness 0
+                                            }
+                                            geometry DEF r6 Mesh {
+                                              url "/home/fugo/Downloads/shuangzu_3/meshes/r6.STL"
+                                            }
+                                          }
+                                          DEF r7 HingeJoint {
+                                            jointParameters HingeJointParameters {
+                                            }
+                                            device [
+                                              RotationalMotor {
+                                                name "r7"
+                                                maxTorque 10000
+                                              }
+                                              PositionSensor {
+                                                name "r7_sensor"
+                                              }
+                                            ]
+                                            endPoint DEF r7 Solid {
+                                              children [
+                                                Shape {
+                                                  appearance DEF r7_material PBRAppearance {
+                                                    baseColor 0.752941 0.752941 0.752941
+                                                    roughness 1.000000
+                                                    metalness 0
+                                                  }
+                                                  geometry DEF r7 Mesh {
+                                                    url "/home/fugo/Downloads/shuangzu_3/meshes/r7.STL"
+                                                  }
+                                                }
+                                              ]
+                                              name "r7"
+                                              boundingObject USE r7
+                                              physics Physics {
+                                                density -1
+                                                mass 0.165596
+                                                centerOfMass [ 0.018446 -0.000000 -0.027780 ]
+                                                inertiaMatrix [
+                                                  4.942578e-05 5.655364e-04 6.078228e-04
+                                                  1.409790e-09 1.449356e-05 -1.078665e-11
+                                                ]
+                                              }
+                                            }
+                                          }
+                                        ]
+                                        name "r6"
+                                        boundingObject USE r6
+                                        physics Physics {
+                                          density -1
+                                          mass 0.010379
+                                          centerOfMass [ 0.000000 0.000000 -0.000000 ]
+                                          inertiaMatrix [
+                                            6.638000e-07 5.714300e-07 5.428000e-07
+                                            -2.148200e-18 -7.479600e-15 3.383800e-15
+                                          ]
+                                        }
+                                      }
+                                    }
+                                  ]
+                                  name "r5"
+                                  boundingObject USE r5
+                                  physics Physics {
+                                    density -1
+                                    mass 0.279990
+                                    centerOfMass [ 0.003776 0.000059 -0.120090 ]
+                                    inertiaMatrix [
+                                      3.149300e-03 3.204100e-03 1.529700e-04
+                                      9.313000e-07 -1.151800e-05 1.230100e-06
+                                    ]
+                                  }
+                                }
+                              }
+                            ]
+                            name "r4"
+                            boundingObject USE r4
+                            physics Physics {
+                              density -1
+                              mass 1.062100
+                              centerOfMass [ 0.004143 0.014743 -0.116340 ]
+                              inertiaMatrix [
+                                9.218500e-03 1.106200e-02 2.174500e-03
+                                -3.900700e-06 2.365700e-04 1.740300e-05
+                              ]
+                            }
+                          }
+                        }
+                      ]
+                      name "r3"
+                      boundingObject USE r3
+                      physics Physics {
+                        density -1
+                        mass 0.526481
+                        centerOfMass [ -0.000754 -0.043614 -0.079545 ]
+                        inertiaMatrix [
+                          1.444363e-03 2.377690e-03 1.328526e-03
+                          8.001101e-07 -4.524859e-07 -5.624336e-05
+                        ]
+                      }
+                    }
+                  }
+                ]
+                name "r2"
+                boundingObject USE r2
+                physics Physics {
+                  density -1
+                  mass 0.217070
+                  centerOfMass [ 0.039095 0.000030 -0.006797 ]
+                  inertiaMatrix [
+                    1.939000e-04 1.681000e-04 2.126900e-04
+                    1.699400e-08 9.085100e-06 -1.831300e-07
+                  ]
+                }
+              }
+            }
+          ]
+          name "r1"
+          boundingObject USE r1
+          physics Physics {
+            density -1
+            mass 0.232041
+            centerOfMass [ -0.001104 -0.000198 0.000052 ]
+            inertiaMatrix [
+              3.134264e-04 2.518517e-04 2.480380e-04
+              -1.402316e-06 4.534089e-07 -5.337224e-08
+            ]
+          }
+        }
+      }
+      DEF l1 Solid {
+        translation -0.077000 0.105000 -0.057500
+        children [
+          Shape {
+            appearance DEF l1_material PBRAppearance {
+              roughness 1.000000
+              metalness 0
+            }
+            geometry DEF l1 Mesh {
+              url "/home/fugo/Downloads/shuangzu_3/meshes/l1.STL"
+            }
+          }
+          DEF l2 HingeJoint {
+            jointParameters HingeJointParameters {
+              axis -1.000000 0.000000 0.000000
+              anchor 0.029000 0.000000 0.000000
+            }
+            device [
+              RotationalMotor {
+                name "l2"
+                maxTorque 10000
+              }
+              PositionSensor {
+                name "l2_sensor"
+              }
+            ]
+            endPoint DEF l2 Solid {
+              translation 0.029000 0.000000 0.000000
+              children [
+                Shape {
+                  appearance DEF l2_material PBRAppearance {
+                    baseColor 0.752941 0.752941 0.752941
+                    roughness 1.000000
+                    metalness 0
+                  }
+                  geometry DEF l2 Mesh {
+                    url "/home/fugo/Downloads/shuangzu_3/meshes/l2.STL"
+                  }
+                }
+                DEF l3 HingeJoint {
+                  jointParameters HingeJointParameters {
+                    axis 0.000000 0.000000 1.000000
+                    anchor 0.048000 0.000000 -0.045500
+                  }
+                  device [
+                    RotationalMotor {
+                      name "l3"
+                      maxTorque 10000
+                    }
+                    PositionSensor {
+                      name "l3_sensor"
+                    }
+                  ]
+                  endPoint DEF l3 Solid {
+                    translation 0.048000 0.000000 -0.045500
+                    children [
+                      Shape {
+                        appearance DEF l3_material PBRAppearance {
+                          baseColor 0.752941 0.752941 0.752941
+                          roughness 1.000000
+                          metalness 0
+                        }
+                        geometry DEF l3 Mesh {
+                          url "/home/fugo/Downloads/shuangzu_3/meshes/l3.STL"
+                        }
+                      }
+                      DEF l4 HingeJoint {
+                        jointParameters HingeJointParameters {
+                          axis 0.000000 -1.000000 0.000000
+                          anchor 0.000000 0.000000 -0.089000
+                        }
+                        device [
+                          RotationalMotor {
+                            name "l4"
+                            maxTorque 10000
+                          }
+                          PositionSensor {
+                            name "l4_sensor"
+                          }
+                        ]
+                        endPoint DEF l4 Solid {
+                          translation 0.000000 0.000000 -0.089000
+                          children [
+                            Shape {
+                              appearance DEF l4_material PBRAppearance {
+                                baseColor 0.752941 0.752941 0.752941
+                                roughness 1.000000
+                                metalness 0
+                              }
+                              geometry DEF l4 Mesh {
+                                url "/home/fugo/Downloads/shuangzu_3/meshes/l4.STL"
+                              }
+                            }
+                            DEF l5 HingeJoint {
+                              jointParameters HingeJointParameters {
+                                axis 0.000000 1.000000 0.000000
+                                anchor 0.000000 -0.105000 -0.360000
+                              }
+                              device [
+                                RotationalMotor {
+                                  name "l5"
+                                  maxTorque 10000
+                                }
+                                PositionSensor {
+                                  name "l5_sensor"
+                                }
+                              ]
+                              endPoint DEF l5 Solid {
+                                translation 0.000000 -0.105000 -0.360000
+                                children [
+                                  Shape {
+                                    appearance DEF l5_material PBRAppearance {
+                                      baseColor 0.752941 0.752941 0.752941
+                                      roughness 1.000000
+                                      metalness 0
+                                    }
+                                    geometry DEF l5 Mesh {
+                                      url "/home/fugo/Downloads/shuangzu_3/meshes/l5.STL"
+                                    }
+                                  }
+                                  DEF l6 HingeJoint {
+                                    jointParameters HingeJointParameters {
+                                      axis 0.000000 1.000000 0.000000
+                                      anchor 0.000000 0.105000 -0.340000
+                                    }
+                                    device [
+                                      RotationalMotor {
+                                        name "l6"
+                                        maxTorque 10000
+                                      }
+                                      PositionSensor {
+                                        name "l6_sensor"
+                                      }
+                                    ]
+                                    endPoint DEF l6 Solid {
+                                      translation 0.000000 0.105000 -0.340000
+                                      children [
+                                        Shape {
+                                          appearance DEF l6_material PBRAppearance {
+                                            baseColor 0.752941 0.752941 0.752941
+                                            roughness 1.000000
+                                            metalness 0
+                                          }
+                                          geometry DEF l6 Mesh {
+                                            url "/home/fugo/Downloads/shuangzu_3/meshes/l6.STL"
+                                          }
+                                        }
+                                        DEF l7 HingeJoint {
+                                          jointParameters HingeJointParameters {
+                                            axis -1.000000 0.000000 0.000000
+                                          }
+                                          device [
+                                            RotationalMotor {
+                                              name "l7"
+                                              maxTorque 10000
+                                            }
+                                            PositionSensor {
+                                              name "l7_sensor"
+                                            }
+                                          ]
+                                          endPoint DEF l7 Solid {
+                                            children [
+                                              Shape {
+                                                appearance DEF l7_material PBRAppearance {
+                                                  baseColor 0.752941 0.752941 0.752941
+                                                  roughness 1.000000
+                                                  metalness 0
+                                                }
+                                                geometry DEF l7 Mesh {
+                                                  url "/home/fugo/Downloads/shuangzu_3/meshes/l7.STL"
+                                                }
+                                              }
+                                            ]
+                                            name "l7"
+                                            boundingObject USE l7
+                                            physics Physics {
+                                              density -1
+                                              mass 0.165596
+                                              centerOfMass [ 0.018446 -0.000000 -0.027780 ]
+                                              inertiaMatrix [
+                                                4.942578e-05 5.655364e-04 6.078228e-04
+                                                1.409790e-09 1.449356e-05 -1.078665e-11
+                                              ]
+                                            }
+                                          }
+                                        }
+                                      ]
+                                      name "l6"
+                                      boundingObject USE l6
+                                      physics Physics {
+                                        density -1
+                                        mass 0.010433
+                                        centerOfMass [ 0.000000 0.000000 -0.000000 ]
+                                        inertiaMatrix [
+                                          6.626256e-07 5.711108e-07 5.438955e-07
+                                          -2.148267e-18 -7.479562e-15 3.383810e-15
+                                        ]
+                                      }
+                                    }
+                                  }
+                                ]
+                                name "l5"
+                                boundingObject USE l5
+                                physics Physics {
+                                  density -1
+                                  mass 0.279985
+                                  centerOfMass [ 0.003776 0.104941 -0.120094 ]
+                                  inertiaMatrix [
+                                    3.149225e-03 3.204112e-03 1.529715e-04
+                                    -9.311086e-07 -1.151680e-05 -1.232904e-06
+                                  ]
+                                }
+                              }
+                            }
+                          ]
+                          name "l4"
+                          boundingObject USE l4
+                          physics Physics {
+                            density -1
+                            mass 1.062088
+                            centerOfMass [ 0.004148 -0.014743 -0.115589 ]
+                            inertiaMatrix [
+                              9.218501e-03 1.106212e-02 2.174487e-03
+                              3.889762e-06 2.371541e-04 -1.907486e-05
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                    name "l3"
+                    boundingObject USE l3
+                    physics Physics {
+                      density -1
+                      mass 0.526481
+                      centerOfMass [ 0.000704 0.043614 -0.079254 ]
+                      inertiaMatrix [
+                        1.440882e-03 2.377692e-03 1.332011e-03
+                        6.212345e-07 7.990156e-06 5.653953e-05
+                      ]
+                    }
+                  }
+                }
+              ]
+              name "l2"
+              boundingObject USE l2
+              physics Physics {
+                density -1
+                mass 0.217073
+                centerOfMass [ 0.039095 0.000030 -0.006797 ]
+                inertiaMatrix [
+                  1.938982e-04 1.680952e-04 2.126891e-04
+                  1.699428e-08 9.085073e-06 -1.831270e-07
+                ]
+              }
+            }
+          }
+        ]
+        name "l1"
+        boundingObject USE l1
+        physics Physics {
+          density -1
+          mass 0.232041
+          centerOfMass [ -0.001104 -0.000198 0.000052 ]
+          inertiaMatrix [
+            3.134264e-04 2.518518e-04 2.480381e-04
+            -1.402353e-06 4.534537e-07 -5.336560e-08
+          ]
+        }
+      }
+      DEF y3 HingeJoint {
+        jointParameters HingeJointParameters {
+          axis 0.000000 0.000000 1.000000
+          anchor 0.000000 0.000000 0.040500
+        }
+        device [
+          RotationalMotor {
+            name "y3"
+            maxTorque 10000
+          }
+          PositionSensor {
+            name "y3_sensor"
+          }
+        ]
+        endPoint DEF y3 Solid {
+          translation 0.000000 0.000000 0.040500
+          children [
+            Shape {
+              appearance DEF y3_material PBRAppearance {
+                roughness 1.000000
+                metalness 0
+              }
+              geometry DEF y3 Mesh {
+                url "/home/fugo/Downloads/shuangzu_3/meshes/y3.STL"
+              }
+            }
+            DEF y2 HingeJoint {
+              jointParameters HingeJointParameters {
+                axis 0.000000 -1.000000 0.000000
+                anchor 0.000000 0.000000 0.050000
+              }
+              device [
+                RotationalMotor {
+                  name "y2"
+                  maxTorque 10000
+                }
+                PositionSensor {
+                  name "y2_sensor"
+                }
+              ]
+              endPoint DEF y2 Solid {
+                translation 0.000000 0.000000 0.050000
+                children [
+                  Shape {
+                    appearance DEF y2_material PBRAppearance {
+                      baseColor 0.686275 0.686275 0.686275
+                      roughness 1.000000
+                      metalness 0
+                    }
+                    geometry DEF y2 Mesh {
+                      url "/home/fugo/Downloads/shuangzu_3/meshes/y2.STL"
+                    }
+                  }
+                  DEF y1 HingeJoint {
+                    jointParameters HingeJointParameters {
+                    }
+                    device [
+                      RotationalMotor {
+                        name "y1"
+                        maxTorque 10000
+                      }
+                      PositionSensor {
+                        name "y1_sensor"
+                      }
+                    ]
+                    endPoint DEF y1 Solid {
+                      children [
+                        Shape {
+                          appearance DEF y1_material PBRAppearance {
+                            baseColor 0.752941 0.752941 0.752941
+                            roughness 1.000000
+                            metalness 0
+                          }
+                          geometry DEF y1 Mesh {
+                            url "/home/fugo/Downloads/shuangzu_3/meshes/y1.STL"
+                          }
+                        }
+                        DEF b1 Solid {
+                          translation 0.000000 0.000000 0.252603
+                          children [
+                            Shape {
+                              appearance DEF b1_material PBRAppearance {
+                                baseColor 0.752941 0.752941 0.752941
+                                roughness 1.000000
+                                metalness 0
+                              }
+                              geometry DEF b1 Mesh {
+                                url "/home/fugo/Downloads/shuangzu_3/meshes/b1.STL"
+                              }
+                            }
+                            DEF t2 HingeJoint {
+                              jointParameters HingeJointParameters {
+                                axis 0.000012 0.000068 -1.000000
+                                anchor 0.000000 0.000000 0.146926
+                              }
+                              device [
+                                RotationalMotor {
+                                  name "t2"
+                                  maxTorque 10000
+                                }
+                                PositionSensor {
+                                  name "t2_sensor"
+                                }
+                              ]
+                              endPoint DEF t2 Solid {
+                                translation 0.000000 0.000000 0.146926
+                                children [
+                                  Shape {
+                                    appearance DEF t2_material PBRAppearance {
+                                      baseColor 0.752941 0.752941 0.752941
+                                      roughness 1.000000
+                                      metalness 0
+                                    }
+                                    geometry DEF t2 Mesh {
+                                      url "/home/fugo/Downloads/shuangzu_3/meshes/t2.STL"
+                                    }
+                                  }
+                                  DEF t3 HingeJoint {
+                                    jointParameters HingeJointParameters {
+                                      axis 1.000000 0.000000 0.000012
+                                      anchor -0.021401 0.000000 0.122500
+                                    }
+                                    device [
+                                      RotationalMotor {
+                                        name "t3"
+                                        maxTorque 10000
+                                      }
+                                      PositionSensor {
+                                        name "t3_sensor"
+                                      }
+                                    ]
+                                    endPoint DEF t3 Solid {
+                                      translation -0.021401 0.000000 0.122500
+                                      children [
+                                        Shape {
+                                          appearance DEF t3_material PBRAppearance {
+                                            baseColor 0.752941 0.752941 0.752941
+                                            roughness 1.000000
+                                            metalness 0
+                                          }
+                                          geometry DEF t3 Mesh {
+                                            url "/home/fugo/Downloads/shuangzu_3/meshes/t3.STL"
+                                          }
+                                        }
+                                        DEF t4 HingeJoint {
+                                          jointParameters HingeJointParameters {
+                                            axis 0.000000 -1.000000 -0.000069
+                                            anchor 0.021400 -0.023000 0.000000
+                                          }
+                                          device [
+                                            RotationalMotor {
+                                              name "t4"
+                                              maxTorque 10000
+                                            }
+                                            PositionSensor {
+                                              name "t4_sensor"
+                                            }
+                                          ]
+                                          endPoint DEF t4 Solid {
+                                            translation 0.021400 -0.023000 0.000000
+                                            children [
+                                              Shape {
+                                                appearance DEF t4_material PBRAppearance {
+                                                  roughness 1.000000
+                                                  metalness 0
+                                                }
+                                                geometry DEF t4 Mesh {
+                                                  url "/home/fugo/Downloads/shuangzu_3/meshes/t4.STL"
+                                                }
+                                              }
+                                            ]
+                                            name "t4"
+                                            boundingObject USE t4
+                                            physics Physics {
+                                              density -1
+                                              mass 0.010626
+                                              centerOfMass [ -0.000000 0.021081 0.018975 ]
+                                              inertiaMatrix [
+                                                7.504969e-06 3.569963e-06 5.491554e-06
+                                                4.717857e-12 2.458348e-11 -3.866617e-07
+                                              ]
+                                            }
+                                          }
+                                        }
+                                      ]
+                                      name "t3"
+                                      boundingObject USE t3
+                                      physics Physics {
+                                        density -1
+                                        mass 0.018957
+                                        centerOfMass [ 0.020860 0.002997 -0.001947 ]
+                                        inertiaMatrix [
+                                          3.072610e-06 5.660771e-06 3.718784e-06
+                                          4.102925e-08 1.783123e-08 -1.517050e-08
+                                        ]
+                                      }
+                                    }
+                                  }
+                                ]
+                                name "t2"
+                                boundingObject USE t2
+                                physics Physics {
+                                  density -1
+                                  mass 0.071731
+                                  centerOfMass [ 0.001296 -0.000007 0.056236 ]
+                                  inertiaMatrix [
+                                    4.733537e-05 5.073640e-05 2.892616e-05
+                                    -5.918076e-09 -6.334510e-06 -3.001181e-08
+                                  ]
+                                }
+                              }
+                            }
+                            DEF you1 HingeJoint {
+                              jointParameters HingeJointParameters {
+                                axis 0.000000 -0.906308 0.422618
+                                anchor 0.000000 -0.126624 0.019656
+                              }
+                              device [
+                                RotationalMotor {
+                                  name "you1"
+                                  maxTorque 10000
+                                }
+                                PositionSensor {
+                                  name "you1_sensor"
+                                }
+                              ]
+                              endPoint DEF you1 Solid {
+                                translation 0.000000 -0.126624 0.019656
+                                rotation -1.000000 0.000000 0.000000 0.436332
+                                children [
+                                  Shape {
+                                    appearance DEF you1_material PBRAppearance {
+                                      baseColor 0.752941 0.752941 0.752941
+                                      roughness 1.000000
+                                      metalness 0
+                                    }
+                                    geometry DEF you1 Mesh {
+                                      url "/home/fugo/Downloads/shuangzu_3/meshes/you1.STL"
+                                    }
+                                  }
+                                  DEF you2 HingeJoint {
+                                    jointParameters HingeJointParameters {
+                                      axis -1.000000 -0.000000 0.000000
+                                      anchor 0.032000 -0.067000 0.000000
+                                    }
+                                    device [
+                                      RotationalMotor {
+                                        name "you2"
+                                        maxTorque 10000
+                                      }
+                                      PositionSensor {
+                                        name "you2_sensor"
+                                      }
+                                    ]
+                                    endPoint DEF you2 Solid {
+                                      translation 0.032000 -0.067000 0.000000
+                                      rotation 1.000000 0.000000 0.000000 2.007129
+                                      children [
+                                        Shape {
+                                          appearance DEF you2_material PBRAppearance {
+                                            baseColor 0.752941 0.752941 0.752941
+                                            roughness 1.000000
+                                            metalness 0
+                                          }
+                                          geometry DEF you2 Mesh {
+                                            url "/home/fugo/Downloads/shuangzu_3/meshes/you2.STL"
+                                          }
+                                        }
+                                        DEF you3 HingeJoint {
+                                          jointParameters HingeJointParameters {
+                                            axis 0.000000 -1.000000 0.000000
+                                            anchor -0.032000 -0.136530 0.040000
+                                          }
+                                          device [
+                                            RotationalMotor {
+                                              name "you3"
+                                              maxTorque 10000
+                                            }
+                                            PositionSensor {
+                                              name "you3_sensor"
+                                            }
+                                          ]
+                                          endPoint DEF you3 Solid {
+                                            translation -0.032000 -0.136530 0.040000
+                                            children [
+                                              Shape {
+                                                appearance DEF you3_material PBRAppearance {
+                                                  baseColor 0.752941 0.752941 0.752941
+                                                  roughness 1.000000
+                                                  metalness 0
+                                                }
+                                                geometry DEF you3 Mesh {
+                                                  url "/home/fugo/Downloads/shuangzu_3/meshes/you3.STL"
+                                                }
+                                              }
+                                              DEF you4 HingeJoint {
+                                                jointParameters HingeJointParameters {
+                                                  axis 0.000000 0.000000 1.000000
+                                                  anchor 0.000000 -0.110000 0.022530
+                                                }
+                                                device [
+                                                  RotationalMotor {
+                                                    name "you4"
+                                                    maxTorque 10000
+                                                  }
+                                                  PositionSensor {
+                                                    name "you4_sensor"
+                                                  }
+                                                ]
+                                                endPoint DEF you4 Solid {
+                                                  translation 0.000000 -0.110000 0.022530
+                                                  children [
+                                                    Shape {
+                                                      appearance DEF you4_material PBRAppearance {
+                                                        baseColor 0.752941 0.752941 0.752941
+                                                        roughness 1.000000
+                                                        metalness 0
+                                                      }
+                                                      geometry DEF you4 Mesh {
+                                                        url "/home/fugo/Downloads/shuangzu_3/meshes/you4.STL"
+                                                      }
+                                                    }
+                                                    DEF you5 HingeJoint {
+                                                      jointParameters HingeJointParameters {
+                                                        axis -0.000069 1.000000 0.000000
+                                                        anchor 0.000000 -0.119030 -0.022500
+                                                      }
+                                                      device [
+                                                        RotationalMotor {
+                                                          name "you5"
+                                                          maxTorque 10000
+                                                        }
+                                                        PositionSensor {
+                                                          name "you5_sensor"
+                                                        }
+                                                      ]
+                                                      endPoint DEF you5 Solid {
+                                                        translation 0.000000 -0.119030 -0.022500
+                                                        rotation 0.000000 0.000000 1.000000 0.000069
+                                                        children [
+                                                          Shape {
+                                                            appearance DEF you5_material PBRAppearance {
+                                                              baseColor 0.752941 0.752941 0.752941
+                                                              roughness 1.000000
+                                                              metalness 0
+                                                            }
+                                                            geometry DEF you5 Mesh {
+                                                              url "/home/fugo/Downloads/shuangzu_3/meshes/you5.STL"
+                                                            }
+                                                          }
+                                                          DEF you6 HingeJoint {
+                                                            jointParameters HingeJointParameters {
+                                                              axis 0.000000 0.000000 -1.000000
+                                                              anchor 0.000000 -0.122500 0.021400
+                                                            }
+                                                            device [
+                                                              RotationalMotor {
+                                                                name "you6"
+                                                                maxTorque 10000
+                                                              }
+                                                              PositionSensor {
+                                                                name "you6_sensor"
+                                                              }
+                                                            ]
+                                                            endPoint DEF you6 Solid {
+                                                              translation 0.000000 -0.122500 0.021400
+                                                              children [
+                                                                Shape {
+                                                                  appearance DEF you6_material PBRAppearance {
+                                                                    baseColor 0.752941 0.752941 0.752941
+                                                                    roughness 1.000000
+                                                                    metalness 0
+                                                                  }
+                                                                  geometry DEF you6 Mesh {
+                                                                    url "/home/fugo/Downloads/shuangzu_3/meshes/you6.STL"
+                                                                  }
+                                                                }
+                                                                DEF you7 HingeJoint {
+                                                                  jointParameters HingeJointParameters {
+                                                                    axis -1.000000 0.000000 0.000000
+                                                                    anchor -0.023000 0.000000 -0.021400
+                                                                  }
+                                                                  device [
+                                                                    RotationalMotor {
+                                                                      name "you7"
+                                                                      maxTorque 10000
+                                                                    }
+                                                                    PositionSensor {
+                                                                      name "you7_sensor"
+                                                                    }
+                                                                  ]
+                                                                  endPoint DEF you7 Solid {
+                                                                    translation -0.023000 0.000000 -0.021400
+                                                                    children [
+                                                                      Shape {
+                                                                        appearance DEF you7_material PBRAppearance {
+                                                                          roughness 1.000000
+                                                                          metalness 0
+                                                                        }
+                                                                        geometry DEF you7 Mesh {
+                                                                          url "/home/fugo/Downloads/shuangzu_3/meshes/you7.STL"
+                                                                        }
+                                                                      }
+                                                                    ]
+                                                                    name "you7"
+                                                                    boundingObject USE you7
+                                                                    physics Physics {
+                                                                      density -1
+                                                                      mass 0.010626
+                                                                      centerOfMass [ 0.021083 -0.018973 -0.000000 ]
+                                                                      inertiaMatrix [
+                                                                        3.569910e-06 5.491607e-06 7.504969e-06
+                                                                        3.865301e-07 3.284206e-15 -3.225981e-16
+                                                                      ]
+                                                                    }
+                                                                  }
+                                                                }
+                                                              ]
+                                                              name "you6"
+                                                              boundingObject USE you6
+                                                              physics Physics {
+                                                                density -1
+                                                                mass 0.018957
+                                                                centerOfMass [ 0.002997 0.001947 -0.020860 ]
+                                                                inertiaMatrix [
+                                                                  5.660766e-06 3.718783e-06 3.072610e-06
+                                                                  1.530428e-08 -4.102918e-08 1.783754e-08
+                                                                ]
+                                                              }
+                                                            }
+                                                          }
+                                                        ]
+                                                        name "you5"
+                                                        boundingObject USE you5
+                                                        physics Physics {
+                                                          density -1
+                                                          mass 0.071730
+                                                          centerOfMass [ -0.000003 -0.056236 -0.001297 ]
+                                                          inertiaMatrix [
+                                                            5.073622e-05 2.892606e-05 4.733507e-05
+                                                            3.152759e-08 6.326881e-09 -6.334711e-06
+                                                          ]
+                                                        }
+                                                      }
+                                                    }
+                                                  ]
+                                                  name "you4"
+                                                  boundingObject USE you4
+                                                  physics Physics {
+                                                    density -1
+                                                    mass 0.081800
+                                                    centerOfMass [ -0.000047 -0.077743 -0.019141 ]
+                                                    inertiaMatrix [
+                                                      4.047475e-05 3.748727e-05 3.697513e-05
+                                                      -4.637101e-08 1.063402e-08 -9.620553e-07
+                                                    ]
+                                                  }
+                                                }
+                                              }
+                                            ]
+                                            name "you3"
+                                            boundingObject USE you3
+                                            physics Physics {
+                                              density -1
+                                              mass 0.090241
+                                              centerOfMass [ -0.001215 -0.064493 0.000429 ]
+                                              inertiaMatrix [
+                                                3.609312e-05 2.654242e-05 4.243317e-05
+                                                -1.602211e-06 2.726051e-07 3.719023e-07
+                                              ]
+                                            }
+                                          }
+                                        }
+                                      ]
+                                      name "you2"
+                                      boundingObject USE you2
+                                      physics Physics {
+                                        density -1
+                                        mass 0.104284
+                                        centerOfMass [ -0.021528 -0.079026 0.032906 ]
+                                        inertiaMatrix [
+                                          8.406889e-05 6.160202e-05 7.031370e-05
+                                          -1.192774e-05 7.004518e-06 1.785496e-05
+                                        ]
+                                      }
+                                    }
+                                  }
+                                ]
+                                name "you1"
+                                boundingObject USE you1
+                                physics Physics {
+                                  density -1
+                                  mass 0.138901
+                                  centerOfMass [ 0.003670 -0.048867 0.000108 ]
+                                  inertiaMatrix [
+                                    1.038089e-04 6.525371e-05 7.018980e-05
+                                    -8.198696e-07 -3.521229e-09 -1.923526e-07
+                                  ]
+                                }
+                              }
+                            }
+                            DEF zuo1 HingeJoint {
+                              jointParameters HingeJointParameters {
+                                axis 0.000000 0.906308 0.422618
+                                anchor 0.000000 0.126624 0.019656
+                              }
+                              device [
+                                RotationalMotor {
+                                  name "zuo1"
+                                  maxTorque 10000
+                                }
+                                PositionSensor {
+                                  name "zuo1_sensor"
+                                }
+                              ]
+                              endPoint DEF zuo1 Solid {
+                                translation 0.000000 0.126624 0.019656
+                                rotation 1.000000 0.000000 0.000000 0.436332
+                                children [
+                                  Shape {
+                                    appearance DEF zuo1_material PBRAppearance {
+                                      baseColor 0.752941 0.752941 0.752941
+                                      roughness 1.000000
+                                      metalness 0
+                                    }
+                                    geometry DEF zuo1 Mesh {
+                                      url "/home/fugo/Downloads/shuangzu_3/meshes/zuo1.STL"
+                                    }
+                                  }
+                                  DEF zuo2 HingeJoint {
+                                    jointParameters HingeJointParameters {
+                                      axis 1.000000 0.000000 -0.000000
+                                      anchor 0.032000 0.067000 0.000000
+                                    }
+                                    device [
+                                      RotationalMotor {
+                                        name "zuo2"
+                                        maxTorque 10000
+                                      }
+                                      PositionSensor {
+                                        name "zuo2_sensor"
+                                      }
+                                    ]
+                                    endPoint DEF zuo2 Solid {
+                                      translation 0.032000 0.067000 0.000000
+                                      rotation -1.000000 0.000000 0.000000 2.007129
+                                      children [
+                                        Shape {
+                                          appearance DEF zuo2_material PBRAppearance {
+                                            baseColor 0.752941 0.752941 0.752941
+                                            roughness 1.000000
+                                            metalness 0
+                                          }
+                                          geometry DEF zuo2 Mesh {
+                                            url "/home/fugo/Downloads/shuangzu_3/meshes/zuo2.STL"
+                                          }
+                                        }
+                                        DEF zuo3 HingeJoint {
+                                          jointParameters HingeJointParameters {
+                                            axis 0.000000 -1.000000 0.000000
+                                            anchor -0.032000 0.136530 0.040000
+                                          }
+                                          device [
+                                            RotationalMotor {
+                                              name "zuo3"
+                                              maxTorque 10000
+                                            }
+                                            PositionSensor {
+                                              name "zuo3_sensor"
+                                            }
+                                          ]
+                                          endPoint DEF zuo3 Solid {
+                                            translation -0.032000 0.136530 0.040000
+                                            children [
+                                              Shape {
+                                                appearance DEF zuo3_material PBRAppearance {
+                                                  baseColor 0.752941 0.752941 0.752941
+                                                  roughness 1.000000
+                                                  metalness 0
+                                                }
+                                                geometry DEF zuo3 Mesh {
+                                                  url "/home/fugo/Downloads/shuangzu_3/meshes/zuo3.STL"
+                                                }
+                                              }
+                                              DEF zuo4 HingeJoint {
+                                                jointParameters HingeJointParameters {
+                                                  axis 0.000000 0.000000 1.000000
+                                                  anchor 0.000000 0.110000 0.022530
+                                                }
+                                                device [
+                                                  RotationalMotor {
+                                                    name "zuo4"
+                                                    maxTorque 10000
+                                                  }
+                                                  PositionSensor {
+                                                    name "zuo4_sensor"
+                                                  }
+                                                ]
+                                                endPoint DEF zuo4 Solid {
+                                                  translation 0.000000 0.110000 0.022530
+                                                  children [
+                                                    Shape {
+                                                      appearance DEF zuo4_material PBRAppearance {
+                                                        baseColor 0.752941 0.752941 0.752941
+                                                        roughness 1.000000
+                                                        metalness 0
+                                                      }
+                                                      geometry DEF zuo4 Mesh {
+                                                        url "/home/fugo/Downloads/shuangzu_3/meshes/zuo4.STL"
+                                                      }
+                                                    }
+                                                    DEF zuo5 HingeJoint {
+                                                      jointParameters HingeJointParameters {
+                                                        axis 0.000070 -1.000000 0.000000
+                                                        anchor 0.000000 0.119030 -0.022500
+                                                      }
+                                                      device [
+                                                        RotationalMotor {
+                                                          name "zuo5"
+                                                          maxTorque 10000
+                                                        }
+                                                        PositionSensor {
+                                                          name "zuo5_sensor"
+                                                        }
+                                                      ]
+                                                      endPoint DEF zuo5 Solid {
+                                                        translation 0.000000 0.119030 -0.022500
+                                                        rotation 0.000000 0.000000 1.000000 0.000070
+                                                        children [
+                                                          Shape {
+                                                            appearance DEF zuo5_material PBRAppearance {
+                                                              baseColor 0.752941 0.752941 0.752941
+                                                              roughness 1.000000
+                                                              metalness 0
+                                                            }
+                                                            geometry DEF zuo5 Mesh {
+                                                              url "/home/fugo/Downloads/shuangzu_3/meshes/zuo5.STL"
+                                                            }
+                                                          }
+                                                          DEF zuo6 HingeJoint {
+                                                            jointParameters HingeJointParameters {
+                                                              axis 0.000000 0.000000 -1.000000
+                                                              anchor 0.000000 0.122500 0.021400
+                                                            }
+                                                            device [
+                                                              RotationalMotor {
+                                                                name "zuo6"
+                                                                maxTorque 10000
+                                                              }
+                                                              PositionSensor {
+                                                                name "zuo6_sensor"
+                                                              }
+                                                            ]
+                                                            endPoint DEF zuo6 Solid {
+                                                              translation 0.000000 0.122500 0.021400
+                                                              rotation 0.000000 0.000000 1.000000 0.000069
+                                                              children [
+                                                                Shape {
+                                                                  appearance DEF zuo6_material PBRAppearance {
+                                                                    baseColor 0.752941 0.752941 0.752941
+                                                                    roughness 1.000000
+                                                                    metalness 0
+                                                                  }
+                                                                  geometry DEF zuo6 Mesh {
+                                                                    url "/home/fugo/Downloads/shuangzu_3/meshes/zuo6.STL"
+                                                                  }
+                                                                }
+                                                                DEF zuo7 HingeJoint {
+                                                                  jointParameters HingeJointParameters {
+                                                                    axis 1.000000 0.000069 0.000000
+                                                                    anchor 0.023000 0.000000 -0.021400
+                                                                  }
+                                                                  device [
+                                                                    RotationalMotor {
+                                                                      name "zuo7"
+                                                                      maxTorque 10000
+                                                                    }
+                                                                    PositionSensor {
+                                                                      name "zuo7_sensor"
+                                                                    }
+                                                                  ]
+                                                                  endPoint DEF zuo7 Solid {
+                                                                    translation 0.023000 0.000000 -0.021400
+                                                                    rotation 0.000000 0.000000 1.000000 0.000069
+                                                                    children [
+                                                                      Shape {
+                                                                        appearance DEF zuo7_material PBRAppearance {
+                                                                          roughness 1.000000
+                                                                          metalness 0
+                                                                        }
+                                                                        geometry DEF zuo7 Mesh {
+                                                                          url "/home/fugo/Downloads/shuangzu_3/meshes/zuo7.STL"
+                                                                        }
+                                                                      }
+                                                                    ]
+                                                                    name "zuo7"
+                                                                    boundingObject USE zuo7
+                                                                    physics Physics {
+                                                                      density -1
+                                                                      mass 0.010626
+                                                                      centerOfMass [ -0.021083 0.018973 -0.000000 ]
+                                                                      inertiaMatrix [
+                                                                        3.569910e-06 5.491607e-06 7.504969e-06
+                                                                        3.865301e-07 -1.349160e-12 1.325243e-13
+                                                                      ]
+                                                                    }
+                                                                  }
+                                                                }
+                                                              ]
+                                                              name "zuo6"
+                                                              boundingObject USE zuo6
+                                                              physics Physics {
+                                                                density -1
+                                                                mass 0.018907
+                                                                centerOfMass [ -0.002961 -0.001947 -0.020814 ]
+                                                                inertiaMatrix [
+                                                                  5.660366e-06 3.718732e-06 3.072202e-06
+                                                                  1.543474e-08 4.102566e-08 -1.783421e-08
+                                                                ]
+                                                              }
+                                                            }
+                                                          }
+                                                        ]
+                                                        name "zuo5"
+                                                        boundingObject USE zuo5
+                                                        physics Physics {
+                                                          density -1
+                                                          mass 0.069365
+                                                          centerOfMass [ -0.000009 0.056535 -0.002044 ]
+                                                          inertiaMatrix [
+                                                            5.056894e-05 2.868460e-05 4.693586e-05
+                                                            3.152591e-08 -6.320898e-09 6.334707e-06
+                                                          ]
+                                                        }
+                                                      }
+                                                    }
+                                                  ]
+                                                  name "zuo4"
+                                                  boundingObject USE zuo4
+                                                  physics Physics {
+                                                    density -1
+                                                    mass 0.081800
+                                                    centerOfMass [ -0.000047 0.077743 -0.019141 ]
+                                                    inertiaMatrix [
+                                                      4.047477e-05 3.748727e-05 3.697511e-05
+                                                      4.618276e-08 1.062983e-08 9.620552e-07
+                                                    ]
+                                                  }
+                                                }
+                                              }
+                                            ]
+                                            name "zuo3"
+                                            boundingObject USE zuo3
+                                            physics Physics {
+                                              density -1
+                                              mass 0.092985
+                                              centerOfMass [ -0.001180 0.065837 0.000843 ]
+                                              inertiaMatrix [
+                                                3.648807e-05 2.694774e-05 4.321004e-05
+                                                1.600386e-06 2.722475e-07 -3.705850e-07
+                                              ]
+                                            }
+                                          }
+                                        }
+                                      ]
+                                      name "zuo2"
+                                      boundingObject USE zuo2
+                                      physics Physics {
+                                        density -1
+                                        mass 0.097621
+                                        centerOfMass [ -0.020747 0.075097 0.032422 ]
+                                        inertiaMatrix [
+                                          8.197299e-05 5.724151e-05 6.800952e-05
+                                          1.189612e-05 7.004663e-06 -1.785529e-05
+                                        ]
+                                      }
+                                    }
+                                  }
+                                ]
+                                name "zuo1"
+                                boundingObject USE zuo1
+                                physics Physics {
+                                  density -1
+                                  mass 0.138901
+                                  centerOfMass [ 0.003670 0.048867 0.000108 ]
+                                  inertiaMatrix [
+                                    1.038087e-04 6.525312e-05 7.019017e-05
+                                    8.198743e-07 -3.547595e-09 1.921135e-07
+                                  ]
+                                }
+                              }
+                            }
+                          ]
+                          name "b1"
+                          boundingObject USE b1
+                          physics Physics {
+                            density -1
+                            mass 1.248767
+                            centerOfMass [ 0.000008 -0.000003 -0.025787 ]
+                            inertiaMatrix [
+                              7.028294e-03 4.647677e-03 2.605076e-03
+                              -1.060029e-08 2.795733e-07 4.717556e-08
+                            ]
+                          }
+                        }
+                      ]
+                      name "y1"
+                      boundingObject USE y1
+                      physics Physics {
+                        density -1
+                        mass 0.200234
+                        centerOfMass [ 0.001314 -0.000000 0.062936 ]
+                        inertiaMatrix [
+                          3.060882e-04 3.900272e-04 2.669157e-04
+                          -2.714517e-11 2.085275e-06 1.781850e-11
+                        ]
+                      }
+                    }
+                  }
+                ]
+                name "y2"
+                boundingObject USE y2
+                physics Physics {
+                  density -1
+                  mass 0.009987
+                  centerOfMass [ 0.000000 -0.000690 -0.000043 ]
+                  inertiaMatrix [
+                    7.127714e-07 6.598505e-07 6.857255e-07
+                    -8.890994e-14 -4.885941e-14 4.302299e-09
+                  ]
+                }
+              }
+            }
+          ]
+          name "y3"
+          boundingObject USE y3
+          physics Physics {
+            density -1
+            mass 0.086908
+            centerOfMass [ -0.002169 0.000040 0.021148 ]
+            inertiaMatrix [
+              6.687109e-05 6.320436e-05 8.794996e-05
+              -7.628104e-09 4.334659e-07 -1.031426e-07
+            ]
+          }
+        }
+      }
+      Group {
+        children IS toolSlot
+      }
+    ]
+    name IS name
+    boundingObject USE base
+    physics Physics {
+      density -1
+      mass 0.432869
+      centerOfMass [ -0.037520 -0.000059 -0.023709 ]
+      inertiaMatrix [
+        1.883465e-03 4.507625e-04 1.657532e-03
+        1.398397e-07 -2.571367e-05 -1.308621e-06
+      ]
+    }
+  }
+}

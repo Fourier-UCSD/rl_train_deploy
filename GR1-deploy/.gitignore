@@ -1,0 +1,3 @@
+gr1-rl-deploy/controllers/GR1_lite_webots/libtorch
+gr1-rl-deploy/controllers/GR1_lite_webots/build
+.vscode
