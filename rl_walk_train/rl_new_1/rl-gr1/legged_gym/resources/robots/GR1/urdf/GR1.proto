@@ -1,0 +1,1349 @@
+#VRML_SIM R2022b utf8
+# license: Apache License 2.0
+# license url: http://www.apache.org/licenses/LICENSE-2.0
+# This is a proto file for Webots for the SonnyV4
+# Extracted from: /home/fugo/Downloads/shuangzu_4/urdf/SonnyV4_wholebody.urdf
+
+PROTO SonnyV4 [
+  field  SFVec3f     translation     0 0 0
+  field  SFRotation  rotation        0 0 1 0
+  field  SFString    name            "SonnyV4"  # Is `Robot.name`.
+  field  SFString    controller      "void"     # Is `Robot.controller`.
+  field  MFString    controllerArgs  []         # Is `Robot.controllerArgs`.
+  field  SFString    customData      ""         # Is `Robot.customData`.
+  field  SFBool      supervisor      FALSE      # Is `Robot.supervisor`.
+  field  SFBool      synchronization TRUE       # Is `Robot.synchronization`.
+  field  SFBool      selfCollision   FALSE      # Is `Robot.selfCollision`.
+]
+{
+  Robot {
+    translation IS translation
+    rotation IS rotation
+    controller IS controller
+    controllerArgs IS controllerArgs
+    customData IS customData
+    supervisor IS supervisor
+    synchronization IS synchronization
+    selfCollision IS selfCollision
+    children [
+      Shape {
+        appearance DEF pelvis_material PBRAppearance {
+          baseColor 0.752941 0.752941 0.752941
+          roughness 1.000000
+          metalness 0
+        }
+        geometry DEF base Mesh {
+          url "/home/fugo/Downloads/shuangzu_4/meshes/base.STL"
+        }
+      }
+      HingeJoint {
+        jointParameters HingeJointParameters {
+          anchor -0.048000 0.105000 -0.057500
+        }
+        device [
+          RotationalMotor {
+            name "hipRoll_Left"
+            maxVelocity 8.0
+            minPosition -0.0873
+            maxPosition 0.5236
+            maxTorque 100.0
+          }
+          PositionSensor {
+            name "hipRoll_Left_sensor"
+          }
+        ]
+        endPoint Solid {
+          translation -0.048000 0.105000 -0.057500
+          children [
+            Shape {
+              appearance DEF hipRollLeft_material PBRAppearance {
+                baseColor 0.752941 0.752941 0.752941
+                roughness 1.000000
+                metalness 0
+              }
+              geometry DEF l2 Mesh {
+                url "/home/fugo/Downloads/shuangzu_4/meshes/l2.STL"
+              }
+            }
+            HingeJoint {
+              jointParameters HingeJointParameters {
+                axis 0.000000 0.000000 1.000000
+                anchor 0.048000 0.000000 -0.041500
+              }
+              device [
+                RotationalMotor {
+                  name "hipYaw_Left"
+                  maxVelocity 8.0
+                  minPosition -0.3927
+                  maxPosition 0.3927
+                  maxTorque 82.5
+                }
+                PositionSensor {
+                  name "hipYaw_Left_sensor"
+                }
+              ]
+              endPoint Solid {
+                translation 0.048000 0.000000 -0.041500
+                children [
+                  Shape {
+                    appearance DEF hipYawLeft_material PBRAppearance {
+                      baseColor 0.752941 0.752941 0.752941
+                      roughness 1.000000
+                      metalness 0
+                    }
+                    geometry DEF l3 Mesh {
+                      url "/home/fugo/Downloads/shuangzu_4/meshes/l3.STL"
+                    }
+                  }
+                  HingeJoint {
+                    jointParameters HingeJointParameters {
+                      axis 0.000000 1.000000 0.000000
+                      anchor 0.000000 0.000000 -0.089000
+                    }
+                    device [
+                      RotationalMotor {
+                        name "hipPitch_Left"
+                        maxVelocity 15.0
+                        minPosition -1.2217
+                        maxPosition 0.6981
+                        maxTorque 160.0
+                      }
+                      PositionSensor {
+                        name "hipPitch_Left_sensor"
+                      }
+                    ]
+                    endPoint Solid {
+                      translation 0.000000 0.000000 -0.089000
+                      children [
+                        Shape {
+                          appearance DEF thigh_Left_material PBRAppearance {
+                            baseColor 0.752941 0.752941 0.752941
+                            roughness 1.000000
+                            metalness 0
+                          }
+                          geometry DEF l4 Mesh {
+                            url "/home/fugo/Downloads/shuangzu_4/meshes/l4.STL"
+                          }
+                        }
+                        HingeJoint {
+                          jointParameters HingeJointParameters {
+                            axis 0.000000 1.000000 0.000000
+                            anchor 0.000000 0.000000 -0.360000
+                          }
+                          device [
+                            RotationalMotor {
+                              name "kneePitch_Left"
+                              maxVelocity 15.0
+                              minPosition -0.0873
+                              maxPosition 2.0944
+                              maxTorque 160.0
+                            }
+                            PositionSensor {
+                              name "kneePitch_Left_sensor"
+                            }
+                          ]
+                          endPoint Solid {
+                            translation 0.000000 0.000000 -0.360000
+                            children [
+                              Shape {
+                                appearance DEF shin_Left_material PBRAppearance {
+                                  baseColor 0.752941 0.752941 0.752941
+                                  roughness 1.000000
+                                  metalness 0
+                                }
+                                geometry DEF l5 Mesh {
+                                  url "/home/fugo/Downloads/shuangzu_4/meshes/l5.STL"
+                                }
+                              }
+                              HingeJoint {
+                                jointParameters HingeJointParameters {
+                                  axis 0.000000 1.000000 0.000000
+                                  anchor 0.000000 0.000000 -0.340000
+                                }
+                                device [
+                                  RotationalMotor {
+                                    name "anklePitch_Left"
+                                    maxVelocity 20.0
+                                    minPosition -1.0472
+                                    maxPosition 0.5236
+                                    maxTorque 8.0
+                                  }
+                                  PositionSensor {
+                                    name "anklePitch_Left_sensor"
+                                  }
+                                ]
+                                endPoint Solid {
+                                  translation 0.000000 0.000000 -0.340000
+                                  children [
+                                    Shape {
+                                      appearance DEF footLeftY_material PBRAppearance {
+                                        baseColor 0.752941 0.752941 0.752941
+                                        roughness 1.000000
+                                        metalness 0
+                                      }
+                                      geometry DEF l6 Mesh {
+                                        url "/home/fugo/Downloads/shuangzu_4/meshes/l6.STL"
+                                      }
+                                    }
+                                    HingeJoint {
+                                      jointParameters HingeJointParameters {
+                                      }
+                                      device [
+                                        RotationalMotor {
+                                          name "ankleRoll_Left"
+                                          maxVelocity 20.0
+                                          minPosition -0.3491
+                                          maxPosition 0.3491
+                                          maxTorque 3.0
+                                        }
+                                        PositionSensor {
+                                          name "ankleRoll_Left_sensor"
+                                        }
+                                      ]
+                                      endPoint Solid {
+                                        children [
+                                          Shape {
+                                            appearance DEF toe_left_material PBRAppearance {
+                                              baseColor 0.752941 0.752941 0.752941
+                                              roughness 1.000000
+                                              metalness 0
+                                            }
+                                            geometry DEF l7 Mesh {
+                                              url "/home/fugo/Downloads/shuangzu_4/meshes/l7.STL"
+                                            }
+                                          }
+                                        ]
+                                        name "toe_left"
+                                        boundingObject Group {
+                                          children [
+                                            Transform {
+                                              translation 0.030000 0.020000 -0.012000
+                                              rotation 0.000000 1.000000 0.000000 1.570800
+                                              children [
+                                                Cylinder {
+                                                  radius 0.02
+                                                  height 0.16
+                                                }
+                                              ]
+                                            }
+                                            Transform {
+                                              translation 0.030000 -0.020000 -0.012000
+                                              rotation 0.000000 1.000000 0.000000 1.570800
+                                              children [
+                                                Cylinder {
+                                                  radius 0.02
+                                                  height 0.16
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                        physics Physics {
+                                          density -1
+                                          mass 0.328269
+                                          centerOfMass [ 0.014092 0.000000 -0.024641 ]
+                                          inertiaMatrix [
+                                            1.250000e-04 1.089000e-03 1.152000e-03
+                                            0.000000e+00 -6.500000e-05 0.000000e+00
+                                          ]
+                                        }
+                                      }
+                                    }
+                                  ]
+                                  name "footLeftY"
+                                  physics Physics {
+                                    density -1
+                                    mass 0.081499
+                                    centerOfMass [ 0.000000 0.000000 0.000000 ]
+                                    inertiaMatrix [
+                                      1.092000e-05 8.510000e-06 1.392000e-05
+                                      0.000000e+00 0.000000e+00 0.000000e+00
+                                    ]
+                                  }
+                                }
+                              }
+                            ]
+                            name "shin_Left"
+                            physics Physics {
+                              density -1
+                              mass 1.596833
+                              centerOfMass [ -0.003249 0.000089 -0.125655 ]
+                              inertiaMatrix [
+                                1.254500e-02 1.292500e-02 1.146000e-03
+                                -6.000000e-06 7.510000e-04 1.280000e-04
+                              ]
+                            }
+                          }
+                        }
+                      ]
+                      name "thigh_Left"
+                      physics Physics {
+                        density -1
+                        mass 5.912408
+                        centerOfMass [ 0.001848 -0.020822 -0.089529 ]
+                        inertiaMatrix [
+                          6.623200e-02 7.289800e-02 1.278800e-02
+                          1.840000e-04 -8.310000e-04 -5.319000e-03
+                        ]
+                      }
+                    }
+                  }
+                ]
+                name "hipYawLeft"
+                physics Physics {
+                  density -1
+                  mass 3.946045
+                  centerOfMass [ -0.000002 0.044064 -0.085155 ]
+                  inertiaMatrix [
+                    9.075000e-03 1.471100e-02 8.308000e-03
+                    -0.000000e+00 -2.900000e-05 -4.570000e-04
+                  ]
+                }
+              }
+            }
+          ]
+          name "hipRollLeft"
+          physics Physics {
+            density -1
+            mass 1.300114
+            centerOfMass [ 0.038363 0.000079 -0.000669 ]
+            inertiaMatrix [
+              1.191000e-03 1.273000e-03 1.434000e-03
+              1.000000e-06 -1.220000e-04 0.000000e+00
+            ]
+          }
+        }
+      }
+      HingeJoint {
+        jointParameters HingeJointParameters {
+          anchor -0.048000 -0.105000 -0.057500
+        }
+        device [
+          RotationalMotor {
+            name "hipRoll_Right"
+            maxVelocity 8.0
+            minPosition -0.5236
+            maxPosition 0.0873
+            maxTorque 100.0
+          }
+          PositionSensor {
+            name "hipRoll_Right_sensor"
+          }
+        ]
+        endPoint Solid {
+          translation -0.048000 -0.105000 -0.057500
+          children [
+            Shape {
+              appearance DEF hipRollRight_material PBRAppearance {
+                baseColor 0.752940 0.752940 0.752940
+                roughness 1.000000
+                metalness 0
+              }
+              geometry DEF r2 Mesh {
+                url "/home/fugo/Downloads/shuangzu_4/meshes/r2.STL"
+              }
+            }
+            HingeJoint {
+              jointParameters HingeJointParameters {
+                axis 0.000000 0.000000 1.000000
+                anchor 0.048000 0.000000 -0.041500
+              }
+              device [
+                RotationalMotor {
+                  name "hipYaw_Right"
+                  maxVelocity 8.0
+                  minPosition -0.3927
+                  maxPosition 0.3927
+                  maxTorque 82.5
+                }
+                PositionSensor {
+                  name "hipYaw_Right_sensor"
+                }
+              ]
+              endPoint Solid {
+                translation 0.048000 0.000000 -0.041500
+                children [
+                  Shape {
+                    appearance DEF hipYawRight_material PBRAppearance {
+                      baseColor 0.752941 0.752941 0.752941
+                      roughness 1.000000
+                      metalness 0
+                    }
+                    geometry DEF r3 Mesh {
+                      url "/home/fugo/Downloads/shuangzu_4/meshes/r3.STL"
+                    }
+                  }
+                  HingeJoint {
+                    jointParameters HingeJointParameters {
+                      axis 0.000000 1.000000 0.000000
+                      anchor 0.000000 0.000000 -0.089000
+                    }
+                    device [
+                      RotationalMotor {
+                        name "hipPitch_Right"
+                        maxVelocity 15.0
+                        minPosition -1.2217
+                        maxPosition 0.6981
+                        maxTorque 160.0
+                      }
+                      PositionSensor {
+                        name "hipPitch_Right_sensor"
+                      }
+                    ]
+                    endPoint Solid {
+                      translation 0.000000 0.000000 -0.089000
+                      children [
+                        Shape {
+                          appearance DEF thigh_Right_material PBRAppearance {
+                            baseColor 0.752940 0.752940 0.752940
+                            roughness 1.000000
+                            metalness 0
+                          }
+                          geometry DEF r4 Mesh {
+                            url "/home/fugo/Downloads/shuangzu_4/meshes/r4.STL"
+                          }
+                        }
+                        HingeJoint {
+                          jointParameters HingeJointParameters {
+                            axis 0.000000 1.000000 0.000000
+                            anchor 0.000000 0.000000 -0.360000
+                          }
+                          device [
+                            RotationalMotor {
+                              name "kneePitch_Right"
+                              maxVelocity 15.0
+                              minPosition -0.0873
+                              maxPosition 2.0944
+                              maxTorque 160.0
+                            }
+                            PositionSensor {
+                              name "kneePitch_Right_sensor"
+                            }
+                          ]
+                          endPoint Solid {
+                            translation 0.000000 0.000000 -0.360000
+                            children [
+                              Shape {
+                                appearance DEF shin_Right_material PBRAppearance {
+                                  baseColor 0.752940 0.752940 0.752940
+                                  roughness 1.000000
+                                  metalness 0
+                                }
+                                geometry DEF r5 Mesh {
+                                  url "/home/fugo/Downloads/shuangzu_4/meshes/r5.STL"
+                                }
+                              }
+                              HingeJoint {
+                                jointParameters HingeJointParameters {
+                                  axis 0.000000 1.000000 0.000000
+                                  anchor 0.000000 0.000000 -0.340000
+                                }
+                                device [
+                                  RotationalMotor {
+                                    name "anklePitch_Right"
+                                    maxVelocity 20.0
+                                    minPosition -1.0472
+                                    maxPosition 0.5236
+                                    maxTorque 8.0
+                                  }
+                                  PositionSensor {
+                                    name "anklePitch_Right_sensor"
+                                  }
+                                ]
+                                endPoint Solid {
+                                  translation 0.000000 0.000000 -0.340000
+                                  children [
+                                    Shape {
+                                      appearance DEF footRightY_material PBRAppearance {
+                                        baseColor 0.752940 0.752940 0.752940
+                                        roughness 1.000000
+                                        metalness 0
+                                      }
+                                      geometry DEF r6 Mesh {
+                                        url "/home/fugo/Downloads/shuangzu_4/meshes/r6.STL"
+                                      }
+                                    }
+                                    HingeJoint {
+                                      jointParameters HingeJointParameters {
+                                      }
+                                      device [
+                                        RotationalMotor {
+                                          name "ankleRoll_Right"
+                                          maxVelocity 20.0
+                                          minPosition -0.3491
+                                          maxPosition 0.3491
+                                          maxTorque 3.0
+                                        }
+                                        PositionSensor {
+                                          name "ankleRoll_Right_sensor"
+                                        }
+                                      ]
+                                      endPoint Solid {
+                                        children [
+                                          Shape {
+                                            appearance DEF toe_right_material PBRAppearance {
+                                              baseColor 0.752941 0.752941 0.752941
+                                              roughness 1.000000
+                                              metalness 0
+                                            }
+                                            geometry DEF r7 Mesh {
+                                              url "/home/fugo/Downloads/shuangzu_4/meshes/r7.STL"
+                                            }
+                                          }
+                                        ]
+                                        name "toe_right"
+                                        boundingObject Group {
+                                          children [
+                                            Transform {
+                                              translation 0.030000 0.020000 -0.012000
+                                              rotation 0.000000 1.000000 0.000000 1.570800
+                                              children [
+                                                Cylinder {
+                                                  radius 0.02
+                                                  height 0.16
+                                                }
+                                              ]
+                                            }
+                                            Transform {
+                                              translation 0.030000 -0.020000 -0.012000
+                                              rotation 0.000000 1.000000 0.000000 1.570800
+                                              children [
+                                                Cylinder {
+                                                  radius 0.02
+                                                  height 0.16
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                        physics Physics {
+                                          density -1
+                                          mass 0.328269
+                                          centerOfMass [ 0.014092 0.000000 -0.024641 ]
+                                          inertiaMatrix [
+                                            1.250000e-04 1.089000e-03 1.152000e-03
+                                            -0.000000e+00 -6.500000e-05 -0.000000e+00
+                                          ]
+                                        }
+                                      }
+                                    }
+                                  ]
+                                  name "footRightY"
+                                  physics Physics {
+                                    density -1
+                                    mass 0.081499
+                                    centerOfMass [ 0.000000 0.000000 0.000000 ]
+                                    inertiaMatrix [
+                                      1.092000e-05 8.510000e-06 1.392000e-05
+                                      0.000000e+00 0.000000e+00 0.000000e+00
+                                    ]
+                                  }
+                                }
+                              }
+                            ]
+                            name "shin_Right"
+                            physics Physics {
+                              density -1
+                              mass 1.596833
+                              centerOfMass [ -0.003249 -0.000089 -0.125655 ]
+                              inertiaMatrix [
+                                1.254500e-02 1.292500e-02 1.146000e-03
+                                6.000000e-06 7.510000e-04 -1.280000e-04
+                              ]
+                            }
+                          }
+                        }
+                      ]
+                      name "thigh_Right"
+                      physics Physics {
+                        density -1
+                        mass 5.912408
+                        centerOfMass [ 0.001848 0.020822 -0.089529 ]
+                        inertiaMatrix [
+                          6.623200e-02 7.289800e-02 1.278800e-02
+                          -1.840000e-04 -8.310000e-04 5.319000e-03
+                        ]
+                      }
+                    }
+                  }
+                ]
+                name "hipYawRight"
+                physics Physics {
+                  density -1
+                  mass 3.946045
+                  centerOfMass [ -0.000002 -0.044064 -0.085155 ]
+                  inertiaMatrix [
+                    9.075000e-03 1.471100e-02 8.308000e-03
+                    0.000000e+00 -2.900000e-05 4.570000e-04
+                  ]
+                }
+              }
+            }
+          ]
+          name "hipRollRight"
+          physics Physics {
+            density -1
+            mass 1.300114
+            centerOfMass [ 0.038363 -0.000079 -0.000669 ]
+            inertiaMatrix [
+              1.191000e-03 1.273000e-03 1.434000e-03
+              -1.000000e-06 -1.220000e-04 -0.000000e+00
+            ]
+          }
+        }
+      }
+      HingeJoint {
+        jointParameters HingeJointParameters {
+          axis 0.000000 0.000000 1.000000
+          anchor 0.000000 0.000000 0.006500
+        }
+        device [
+          RotationalMotor {
+            name "waistYaw"
+            maxVelocity 8.0
+            minPosition -0.7854
+            maxPosition 0.7854
+            maxTorque 82.5
+          }
+          PositionSensor {
+            name "waistYaw_sensor"
+          }
+        ]
+        endPoint Solid {
+          translation 0.000000 0.000000 0.006500
+          children [
+            Shape {
+              appearance DEF waistYaw_material PBRAppearance {
+                roughness 1.000000
+                metalness 0
+              }
+              geometry DEF y3 Mesh {
+                url "/home/fugo/Downloads/shuangzu_4/meshes/y3.STL"
+              }
+            }
+            HingeJoint {
+              jointParameters HingeJointParameters {
+                axis 0.000000 1.000000 0.000000
+                anchor 0.000000 -0.039650 0.055000
+              }
+              device [
+                RotationalMotor {
+                  name "waistPitch"
+                  maxVelocity 8.0
+                  minPosition -1.57
+                  maxPosition 1.57
+                  maxTorque 82.5
+                }
+                PositionSensor {
+                  name "waistPitch_sensor"
+                }
+              ]
+              endPoint Solid {
+                translation 0.000000 -0.039650 0.055000
+                children [
+                  Shape {
+                    appearance DEF waistPitch_material PBRAppearance {
+                      baseColor 0.686275 0.686275 0.686275
+                      roughness 1.000000
+                      metalness 0
+                    }
+                    geometry DEF y2 Mesh {
+                      url "/home/fugo/Downloads/shuangzu_4/meshes/y2.STL"
+                    }
+                  }
+                  HingeJoint {
+                    jointParameters HingeJointParameters {
+                      anchor 0.039650 0.039650 0.085000
+                    }
+                    device [
+                      RotationalMotor {
+                        name "waistRoll"
+                        maxVelocity 8.0
+                        minPosition -1.57
+                        maxPosition 1.57
+                        maxTorque 82.5
+                      }
+                      PositionSensor {
+                        name "waistRoll_sensor"
+                      }
+                    ]
+                    endPoint Solid {
+                      translation 0.039650 0.039650 0.085000
+                      children [
+                        Shape {
+                          appearance DEF waistRoll_material PBRAppearance {
+                            baseColor 0.752941 0.752941 0.752941
+                            roughness 1.000000
+                            metalness 0
+                          }
+                          geometry DEF y1 Mesh {
+                            url "/home/fugo/Downloads/shuangzu_4/meshes/y1.STL"
+                          }
+                        }
+                        Solid {
+                          translation -0.039650 0.000000 0.197603
+                          children [
+                            Shape {
+                              appearance DEF torso_material PBRAppearance {
+                                baseColor 0.752941 0.752941 0.752941
+                                roughness 1.000000
+                                metalness 0
+                              }
+                              geometry DEF b1 Mesh {
+                                url "/home/fugo/Downloads/shuangzu_4/meshes/b1.STL"
+                              }
+                            }
+                            Solid {
+                              translation 0.000000 0.000000 0.146926
+                              children [
+                                Shape {
+                                  appearance DEF headYaw_material PBRAppearance {
+                                    baseColor 0.752941 0.752941 0.752941
+                                    roughness 1.000000
+                                    metalness 0
+                                  }
+                                  geometry DEF t2 Mesh {
+                                    url "/home/fugo/Downloads/shuangzu_4/meshes/t2.STL"
+                                  }
+                                }
+                                Solid {
+                                  translation -0.021401 0.000000 0.122500
+                                  children [
+                                    Shape {
+                                      appearance DEF headRoll_material PBRAppearance {
+                                        baseColor 0.752941 0.752941 0.752941
+                                        roughness 1.000000
+                                        metalness 0
+                                      }
+                                      geometry DEF t3 Mesh {
+                                        url "/home/fugo/Downloads/shuangzu_4/meshes/t3.STL"
+                                      }
+                                    }
+                                    Solid {
+                                      translation 0.021400 -0.023000 0.000000
+                                      children [
+                                        Shape {
+                                          appearance DEF headPitch_material PBRAppearance {
+                                            roughness 1.000000
+                                            metalness 0
+                                          }
+                                          geometry DEF t4 Mesh {
+                                            url "/home/fugo/Downloads/shuangzu_4/meshes/t4.STL"
+                                          }
+                                        }
+                                      ]
+                                      name "headPitch"
+                                      boundingObject USE t4
+                                      physics Physics {
+                                        density -1
+                                        mass 0.010626
+                                        centerOfMass [ -0.000000 0.021081 0.018975 ]
+                                        inertiaMatrix [
+                                          7.504969e-06 3.569963e-06 5.491554e-06
+                                          4.717857e-12 2.458348e-11 -3.866617e-07
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                  name "headRoll"
+                                  boundingObject USE t3
+                                  physics Physics {
+                                    density -1
+                                    mass 0.018957
+                                    centerOfMass [ 0.020860 0.002997 -0.001947 ]
+                                    inertiaMatrix [
+                                      3.072610e-06 5.660771e-06 3.718784e-06
+                                      4.102925e-08 1.783123e-08 -1.517050e-08
+                                    ]
+                                  }
+                                }
+                              ]
+                              name "headYaw"
+                              boundingObject USE t2
+                              physics Physics {
+                                density -1
+                                mass 0.071731
+                                centerOfMass [ 0.001296 -0.000007 0.056236 ]
+                                inertiaMatrix [
+                                  4.733537e-05 5.073640e-05 2.892616e-05
+                                  -5.918076e-09 -6.334510e-06 -3.001181e-08
+                                ]
+                              }
+                            }
+                            HingeJoint {
+                              jointParameters HingeJointParameters {
+                                axis 0.000000 0.906308 0.422618
+                                anchor 0.000000 0.126624 0.019656
+                              }
+                              device [
+                                RotationalMotor {
+                                  name "shoulderPitch_Left"
+                                  maxVelocity 8.0
+                                  minPosition -2.618
+                                  maxPosition 0.5236
+                                  maxTorque 18.0
+                                }
+                                PositionSensor {
+                                  name "shoulderPitch_Left_sensor"
+                                }
+                              ]
+                              endPoint Solid {
+                                translation 0.000000 0.126624 0.019656
+                                rotation 1.000000 0.000000 0.000000 0.436332
+                                children [
+                                  Shape {
+                                    appearance DEF shoulderPitchLeft_material PBRAppearance {
+                                      baseColor 0.752941 0.752941 0.752941
+                                      roughness 1.000000
+                                      metalness 0
+                                    }
+                                    geometry DEF zuo1 Mesh {
+                                      url "/home/fugo/Downloads/shuangzu_4/meshes/zuo1.STL"
+                                    }
+                                  }
+                                  HingeJoint {
+                                    jointParameters HingeJointParameters {
+                                      anchor 0.032000 0.067000 0.000000
+                                    }
+                                    device [
+                                      RotationalMotor {
+                                        name "shoulderRoll_Left"
+                                        maxVelocity 8.0
+                                        maxPosition 3.1415926
+                                        maxTorque 18.0
+                                      }
+                                      PositionSensor {
+                                        name "shoulderRoll_Left_sensor"
+                                      }
+                                    ]
+                                    endPoint Solid {
+                                      translation 0.032000 0.067000 0.000000
+                                      rotation -1.000000 0.000000 0.000000 2.007129
+                                      children [
+                                        Shape {
+                                          appearance DEF shoulderRollLeft_material PBRAppearance {
+                                            baseColor 0.752941 0.752941 0.752941
+                                            roughness 1.000000
+                                            metalness 0
+                                          }
+                                          geometry DEF zuo2 Mesh {
+                                            url "/home/fugo/Downloads/shuangzu_4/meshes/zuo2.STL"
+                                          }
+                                        }
+                                        HingeJoint {
+                                          jointParameters HingeJointParameters {
+                                            axis 0.000000 1.000000 0.000000
+                                            anchor -0.032000 0.136530 0.040000
+                                          }
+                                          device [
+                                            RotationalMotor {
+                                              name "shoulderYaw_Left"
+                                              maxVelocity 8.0
+                                              minPosition -1.57
+                                              maxPosition 1.57
+                                              maxTorque 18.0
+                                            }
+                                            PositionSensor {
+                                              name "shoulderYaw_Left_sensor"
+                                            }
+                                          ]
+                                          endPoint Solid {
+                                            translation -0.032000 0.136530 0.040000
+                                            children [
+                                              Shape {
+                                                appearance DEF shoulderYawLeft_material PBRAppearance {
+                                                  baseColor 0.752941 0.752941 0.752941
+                                                  roughness 1.000000
+                                                  metalness 0
+                                                }
+                                                geometry DEF zuo3 Mesh {
+                                                  url "/home/fugo/Downloads/shuangzu_4/meshes/zuo3.STL"
+                                                }
+                                              }
+                                              HingeJoint {
+                                                jointParameters HingeJointParameters {
+                                                  axis 0.000000 0.000000 1.000000
+                                                  anchor 0.000000 0.110000 0.022530
+                                                }
+                                                device [
+                                                  RotationalMotor {
+                                                    name "elbow_Left"
+                                                    maxVelocity 8.0
+                                                    minPosition -1.57
+                                                    maxTorque 18.0
+                                                  }
+                                                  PositionSensor {
+                                                    name "elbow_Left_sensor"
+                                                  }
+                                                ]
+                                                endPoint Solid {
+                                                  translation 0.000000 0.110000 0.022530
+                                                  children [
+                                                    Shape {
+                                                      appearance DEF elbowLeft_material PBRAppearance {
+                                                        baseColor 0.752941 0.752941 0.752941
+                                                        roughness 1.000000
+                                                        metalness 0
+                                                      }
+                                                      geometry DEF zuo4 Mesh {
+                                                        url "/home/fugo/Downloads/shuangzu_4/meshes/zuo4.STL"
+                                                      }
+                                                    }
+                                                    Solid {
+                                                      translation 0.000000 0.119030 -0.022500
+                                                      rotation 0.000000 0.000000 1.000000 0.000070
+                                                      children [
+                                                        Shape {
+                                                          appearance DEF wristYawLeft_material PBRAppearance {
+                                                            baseColor 0.752941 0.752941 0.752941
+                                                            roughness 1.000000
+                                                            metalness 0
+                                                          }
+                                                          geometry DEF zuo5 Mesh {
+                                                            url "/home/fugo/Downloads/shuangzu_4/meshes/zuo5.STL"
+                                                          }
+                                                        }
+                                                        Solid {
+                                                          translation 0.000000 0.122500 0.021400
+                                                          rotation 0.000000 0.000000 1.000000 0.000069
+                                                          children [
+                                                            Shape {
+                                                              appearance DEF wristPitchLeft_material PBRAppearance {
+                                                                baseColor 0.752941 0.752941 0.752941
+                                                                roughness 1.000000
+                                                                metalness 0
+                                                              }
+                                                              geometry DEF zuo6 Mesh {
+                                                                url "/home/fugo/Downloads/shuangzu_4/meshes/zuo6.STL"
+                                                              }
+                                                            }
+                                                            Solid {
+                                                              translation 0.023000 0.000000 -0.021400
+                                                              rotation 0.000000 0.000000 1.000000 0.000069
+                                                              children [
+                                                                Shape {
+                                                                  appearance DEF wristRollLeft_material PBRAppearance {
+                                                                    roughness 1.000000
+                                                                    metalness 0
+                                                                  }
+                                                                  geometry DEF zuo7 Mesh {
+                                                                    url "/home/fugo/Downloads/shuangzu_4/meshes/zuo7.STL"
+                                                                  }
+                                                                }
+                                                              ]
+                                                              name "wristRollLeft"
+                                                              boundingObject USE zuo7
+                                                              physics Physics {
+                                                                density -1
+                                                                mass 0.028689
+                                                                centerOfMass [ -0.021083 0.018973 0.000000 ]
+                                                                inertiaMatrix [
+                                                                  9.640000e-06 1.483000e-05 2.026000e-05
+                                                                  -1.040000e-06 0.000000e+00 0.000000e+00
+                                                                ]
+                                                              }
+                                                            }
+                                                          ]
+                                                          name "wristPitchLeft"
+                                                          boundingObject USE zuo6
+                                                          physics Physics {
+                                                            density -1
+                                                            mass 0.171600
+                                                            centerOfMass [ 0.000316 -0.001301 -0.021172 ]
+                                                            inertiaMatrix [
+                                                              3.941000e-05 5.228000e-05 5.147000e-05
+                                                              3.180000e-06 -6.000000e-08 1.400000e-07
+                                                            ]
+                                                          }
+                                                        }
+                                                      ]
+                                                      name "wristYawLeft"
+                                                      boundingObject USE zuo5
+                                                      physics Physics {
+                                                        density -1
+                                                        mass 0.338174
+                                                        centerOfMass [ 0.000010 0.055805 0.000198 ]
+                                                        inertiaMatrix [
+                                                          3.688500e-04 1.420600e-04 3.247800e-04
+                                                          4.000000e-08 3.000000e-08 1.710000e-06
+                                                        ]
+                                                      }
+                                                    }
+                                                  ]
+                                                  name "elbowLeft"
+                                                  boundingObject USE zuo4
+                                                  physics Physics {
+                                                    density -1
+                                                    mass 0.446956
+                                                    centerOfMass [ -0.000111 0.087538 -0.020856 ]
+                                                    inertiaMatrix [
+                                                      4.362300e-04 1.851200e-04 4.119000e-04
+                                                      -4.000000e-07 -6.000000e-08 -5.009000e-05
+                                                    ]
+                                                  }
+                                                }
+                                              }
+                                            ]
+                                            name "shoulderYawLeft"
+                                            boundingObject USE zuo3
+                                            physics Physics {
+                                              density -1
+                                              mass 0.469749
+                                              centerOfMass [ -0.000582 0.086465 0.000515 ]
+                                              inertiaMatrix [
+                                                8.264200e-04 1.679300e-04 8.186300e-04
+                                                -3.840000e-06 -1.770000e-06 3.320000e-06
+                                              ]
+                                            }
+                                          }
+                                        }
+                                      ]
+                                      name "shoulderRollLeft"
+                                      boundingObject USE zuo2
+                                      physics Physics {
+                                        density -1
+                                        mass 0.507666
+                                        centerOfMass [ -0.026213 0.094873 0.036140 ]
+                                        inertiaMatrix [
+                                          9.298600e-04 3.267500e-04 9.264700e-04
+                                          -2.187600e-04 -6.163000e-05 1.732800e-04
+                                        ]
+                                      }
+                                    }
+                                  }
+                                ]
+                                name "shoulderPitchLeft"
+                                boundingObject USE zuo1
+                                physics Physics {
+                                  density -1
+                                  mass 0.771702
+                                  centerOfMass [ 0.005440 0.058187 -0.000011 ]
+                                  inertiaMatrix [
+                                    6.850000e-04 4.101700e-04 6.450900e-04
+                                    4.059000e-05 6.400000e-07 -1.770000e-06
+                                  ]
+                                }
+                              }
+                            }
+                            HingeJoint {
+                              jointParameters HingeJointParameters {
+                                axis 0.000000 0.906308 -0.422618
+                                anchor 0.000000 -0.126624 0.019656
+                              }
+                              device [
+                                RotationalMotor {
+                                  name "shoulderPitch_Right"
+                                  maxVelocity 8.0
+                                  minPosition -2.618
+                                  maxPosition 0.5236
+                                  maxTorque 18.0
+                                }
+                                PositionSensor {
+                                  name "shoulderPitch_Right_sensor"
+                                }
+                              ]
+                              endPoint Solid {
+                                translation 0.000000 -0.126624 0.019656
+                                rotation -1.000000 0.000000 0.000000 0.436332
+                                children [
+                                  Shape {
+                                    appearance DEF shoulderPitchRight_material PBRAppearance {
+                                      baseColor 0.752941 0.752941 0.752941
+                                      roughness 1.000000
+                                      metalness 0
+                                    }
+                                    geometry DEF you1 Mesh {
+                                      url "/home/fugo/Downloads/shuangzu_4/meshes/you1.STL"
+                                    }
+                                  }
+                                  HingeJoint {
+                                    jointParameters HingeJointParameters {
+                                      anchor 0.032000 -0.067000 0.000000
+                                    }
+                                    device [
+                                      RotationalMotor {
+                                        name "shoulderRoll_Right"
+                                        maxVelocity 8.0
+                                        minPosition -3.1415926
+                                        maxTorque 18.0
+                                      }
+                                      PositionSensor {
+                                        name "shoulderRoll_Right_sensor"
+                                      }
+                                    ]
+                                    endPoint Solid {
+                                      translation 0.032000 -0.067000 0.000000
+                                      rotation 1.000000 0.000000 0.000000 2.007129
+                                      children [
+                                        Shape {
+                                          appearance DEF shoulderRollRight_material PBRAppearance {
+                                            baseColor 0.752941 0.752941 0.752941
+                                            roughness 1.000000
+                                            metalness 0
+                                          }
+                                          geometry DEF you2 Mesh {
+                                            url "/home/fugo/Downloads/shuangzu_4/meshes/you2.STL"
+                                          }
+                                        }
+                                        HingeJoint {
+                                          jointParameters HingeJointParameters {
+                                            axis 0.000000 1.000000 0.000000
+                                            anchor -0.032000 -0.136530 0.040000
+                                          }
+                                          device [
+                                            RotationalMotor {
+                                              name "shoulderYaw_Right"
+                                              maxVelocity 8.0
+                                              minPosition -1.57
+                                              maxPosition 1.57
+                                              maxTorque 18.0
+                                            }
+                                            PositionSensor {
+                                              name "shoulderYaw_Right_sensor"
+                                            }
+                                          ]
+                                          endPoint Solid {
+                                            translation -0.032000 -0.136530 0.040000
+                                            children [
+                                              Shape {
+                                                appearance DEF shoulderYawRight_material PBRAppearance {
+                                                  baseColor 0.752941 0.752941 0.752941
+                                                  roughness 1.000000
+                                                  metalness 0
+                                                }
+                                                geometry DEF you3 Mesh {
+                                                  url "/home/fugo/Downloads/shuangzu_4/meshes/you3.STL"
+                                                }
+                                              }
+                                              HingeJoint {
+                                                jointParameters HingeJointParameters {
+                                                  axis 0.000000 0.000000 1.000000
+                                                  anchor 0.000000 -0.110000 0.022530
+                                                }
+                                                device [
+                                                  RotationalMotor {
+                                                    name "elbow_Right"
+                                                    maxVelocity 8.0
+                                                    maxPosition 1.57
+                                                    maxTorque 18.0
+                                                  }
+                                                  PositionSensor {
+                                                    name "elbow_Right_sensor"
+                                                  }
+                                                ]
+                                                endPoint Solid {
+                                                  translation 0.000000 -0.110000 0.022530
+                                                  children [
+                                                    Shape {
+                                                      appearance DEF elbowRight_material PBRAppearance {
+                                                        baseColor 0.752941 0.752941 0.752941
+                                                        roughness 1.000000
+                                                        metalness 0
+                                                      }
+                                                      geometry DEF you4 Mesh {
+                                                        url "/home/fugo/Downloads/shuangzu_4/meshes/you4.STL"
+                                                      }
+                                                    }
+                                                    Solid {
+                                                      translation 0.000000 -0.119030 -0.022500
+                                                      rotation 0.000000 0.000000 1.000000 0.000069
+                                                      children [
+                                                        Shape {
+                                                          appearance DEF wristYawRight_material PBRAppearance {
+                                                            baseColor 0.752941 0.752941 0.752941
+                                                            roughness 1.000000
+                                                            metalness 0
+                                                          }
+                                                          geometry DEF you5 Mesh {
+                                                            url "/home/fugo/Downloads/shuangzu_4/meshes/you5.STL"
+                                                          }
+                                                        }
+                                                        Solid {
+                                                          translation 0.000000 -0.122500 0.021400
+                                                          children [
+                                                            Shape {
+                                                              appearance DEF wristPitchRight_material PBRAppearance {
+                                                                baseColor 0.752941 0.752941 0.752941
+                                                                roughness 1.000000
+                                                                metalness 0
+                                                              }
+                                                              geometry DEF you6 Mesh {
+                                                                url "/home/fugo/Downloads/shuangzu_4/meshes/you6.STL"
+                                                              }
+                                                            }
+                                                            Solid {
+                                                              translation -0.023000 0.000000 -0.021400
+                                                              children [
+                                                                Shape {
+                                                                  appearance DEF wristRollRight_material PBRAppearance {
+                                                                    roughness 1.000000
+                                                                    metalness 0
+                                                                  }
+                                                                  geometry DEF you7 Mesh {
+                                                                    url "/home/fugo/Downloads/shuangzu_4/meshes/you7.STL"
+                                                                  }
+                                                                }
+                                                              ]
+                                                              name "wristRollRight"
+                                                              boundingObject USE you7
+                                                              physics Physics {
+                                                                density -1
+                                                                mass 0.028689
+                                                                centerOfMass [ 0.021083 -0.018973 0.000000 ]
+                                                                inertiaMatrix [
+                                                                  9.640000e-06 1.483000e-05 2.026000e-05
+                                                                  -1.040000e-06 0.000000e+00 0.000000e+00
+                                                                ]
+                                                              }
+                                                            }
+                                                          ]
+                                                          name "wristPitchRight"
+                                                          boundingObject USE you6
+                                                          physics Physics {
+                                                            density -1
+                                                            mass 0.171600
+                                                            centerOfMass [ -0.001029 0.001292 -0.021174 ]
+                                                            inertiaMatrix [
+                                                              3.928000e-05 4.907000e-05 4.825000e-05
+                                                              3.320000e-06 9.000000e-08 -1.400000e-07
+                                                            ]
+                                                          }
+                                                        }
+                                                      ]
+                                                      name "wristYawRight"
+                                                      boundingObject USE you5
+                                                      physics Physics {
+                                                        density -1
+                                                        mass 0.338174
+                                                        centerOfMass [ -0.000006 -0.055809 -0.000105 ]
+                                                        inertiaMatrix [
+                                                          3.677700e-04 1.410200e-04 3.247200e-04
+                                                          6.000000e-08 -2.000000e-08 -2.570000e-06
+                                                        ]
+                                                      }
+                                                    }
+                                                  ]
+                                                  name "elbowRight"
+                                                  boundingObject USE you4
+                                                  physics Physics {
+                                                    density -1
+                                                    mass 0.446956
+                                                    centerOfMass [ -0.000108 -0.087500 -0.020856 ]
+                                                    inertiaMatrix [
+                                                      4.314400e-04 1.824400e-04 4.070500e-04
+                                                      4.100000e-07 -5.000000e-08 5.007000e-05
+                                                    ]
+                                                  }
+                                                }
+                                              }
+                                            ]
+                                            name "shoulderYawRight"
+                                            boundingObject USE you3
+                                            physics Physics {
+                                              density -1
+                                              mass 0.469750
+                                              centerOfMass [ -0.000583 -0.086461 0.000479 ]
+                                              inertiaMatrix [
+                                                8.218300e-04 1.634500e-04 8.158800e-04
+                                                3.870000e-06 -1.760000e-06 -2.940000e-06
+                                              ]
+                                            }
+                                          }
+                                        }
+                                      ]
+                                      name "shoulderRollRight"
+                                      boundingObject USE you2
+                                      physics Physics {
+                                        density -1
+                                        mass 0.507665
+                                        centerOfMass [ -0.026213 -0.094840 0.036137 ]
+                                        inertiaMatrix [
+                                          9.246400e-04 3.240600e-04 9.213300e-04
+                                          2.186700e-04 -6.162000e-05 -1.732100e-04
+                                        ]
+                                      }
+                                    }
+                                  }
+                                ]
+                                name "shoulderPitchRight"
+                                boundingObject USE you1
+                                physics Physics {
+                                  density -1
+                                  mass 0.771702
+                                  centerOfMass [ 0.005241 -0.058186 -0.000009 ]
+                                  inertiaMatrix [
+                                    6.783700e-04 4.029700e-04 6.379600e-04
+                                    -3.923000e-05 6.100000e-07 1.790000e-06
+                                  ]
+                                }
+                              }
+                            }
+                          ]
+                          name "torso"
+                          boundingObject USE b1
+                          physics Physics {
+                            density -1
+                            mass 5.293464
+                            centerOfMass [ -0.012990 0.012559 -0.016876 ]
+                            inertiaMatrix [
+                              3.105800e-02 2.321600e-02 2.321600e-02
+                              6.990000e-04 2.136000e-03 2.321600e-02
+                            ]
+                          }
+                        }
+                      ]
+                      name "waistRoll"
+                      boundingObject USE y1
+                      physics Physics {
+                        density -1
+                        mass 0.317200
+                        centerOfMass [ -0.035884 0.000000 0.032200 ]
+                        inertiaMatrix [
+                          3.440000e-04 5.170000e-04 6.050000e-04
+                          0.000000e+00 -1.500000e-05 0.000000e+00
+                        ]
+                      }
+                    }
+                  }
+                ]
+                name "waistPitch"
+                boundingObject USE y2
+                physics Physics {
+                  density -1
+                  mass 2.453693
+                  centerOfMass [ 0.001679 0.037972 0.042537 ]
+                  inertiaMatrix [
+                    6.530000e-03 6.528000e-03 2.075000e-03
+                    7.000000e-06 1.700000e-04 1.770000e-04
+                  ]
+                }
+              }
+            }
+          ]
+          name "waistYaw"
+          boundingObject USE y3
+          physics Physics {
+            density -1
+            mass 0.378860
+            centerOfMass [ -0.010388 -0.001695 0.022471 ]
+            inertiaMatrix [
+              5.590000e-04 4.140000e-04 7.130000e-04
+              -1.000000e-05 -2.000000e-06 -2.700000e-05
+            ]
+          }
+        }
+      }
+    ]
+    name IS name
+    boundingObject USE base
+    physics Physics {
+      density -1
+      mass 5.049730
+      centerOfMass [ -0.057791 0.000000 -0.048345 ]
+      inertiaMatrix [
+        4.432900e-02 1.095000e-02 4.700700e-02
+        -2.700000e-05 2.091000e-03 -4.000000e-06
+      ]
+    }
+  }
+}

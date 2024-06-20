@@ -1,0 +1,1902 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="shuangzu">
+  <link
+    name="base">
+    <inertial>
+      <origin
+        xyz="-0.0388165035113614 1.19219437812788E-05 -0.0360013611915506"
+        rpy="0 0 0" />
+      <mass
+        value="1.15713272912918" />
+      <inertia
+        ixx="0.00509869576779889"
+        ixy="-1.47058975087707E-07"
+        ixz="-3.5968342472467E-05"
+        iyy="0.00118353363951397"
+        iyz="3.21815243924651E-07"
+        izz="0.00454960000793292" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shuangzu/meshes/base.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shuangzu/meshes/base.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="r1">
+    <inertial>
+      <origin
+        xyz="-0.0301036420070822 -0.000198392294632019 5.24275207025956E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.232040896756309" />
+      <inertia
+        ixx="0.000313426417187083"
+        ixy="-1.40235009116806E-06"
+        ixz="4.53450819930152E-07"
+        iyy="0.000251851828893196"
+        iyz="-5.33656049543053E-08"
+        izz="0.000248038142545207" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shuangzu/meshes/r1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shuangzu/meshes/r1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r1"
+    type="fixed">
+    <origin
+      xyz="-0.048 -0.105 -0.0575"
+      rpy="0 0 0" />
+    <parent
+      link="base" />
+    <child
+      link="r1" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="r2">
+    <inertial>
+      <origin
+        xyz="0.0271385156867913 1.98571900084654E-05 0.000942883382600944"
+        rpy="0 0 0" />
+      <mass
+        value="0.326596679590429" />
+      <inertia
+        ixx="0.000334468424290944"
+        ixy="1.69955385082428E-08"
+        ixz="8.5907549432608E-06"
+        iyy="0.000224746586204988"
+        iyz="-1.82816842529892E-07"
+        izz="0.000297958448467681" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shuangzu/meshes/r2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shuangzu/meshes/r2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r2"
+    type="continuous">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="r1" />
+    <child
+      link="r2" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="r3">
+    <inertial>
+      <origin
+        xyz="-0.000754421305820943 -0.0436142462855318 -0.0795445987225532"
+        rpy="0 0 0" />
+      <mass
+        value="0.526480913399569" />
+      <inertia
+        ixx="0.00144436269040157"
+        ixy="8.00120105952724E-07"
+        ixz="-4.5246763037308E-07"
+        iyy="0.00237768970890907"
+        iyz="-5.62433641274564E-05"
+        izz="0.00132852545386902" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shuangzu/meshes/r3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shuangzu/meshes/r3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r3"
+    type="continuous">
+    <origin
+      xyz="0.0480000000000001 0 -0.041500000000002"
+      rpy="0 0 0" />
+    <parent
+      link="r2" />
+    <child
+      link="r3" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="r4">
+    <inertial>
+      <origin
+        xyz="0.00414274048373942 0.014742802160009 -0.116337018476203"
+        rpy="0 0 0" />
+      <mass
+        value="1.06208799818476" />
+      <inertia
+        ixx="0.00921848864454789"
+        ixy="-3.90074675019488E-06"
+        ixz="0.000236566331243245"
+        iyy="0.0110621131240207"
+        iyz="1.7403491837094E-05"
+        izz="0.00217449616559131" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shuangzu/meshes/r4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shuangzu/meshes/r4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r4"
+    type="continuous">
+    <origin
+      xyz="0 0 -0.0889999999999575"
+      rpy="0 0 0" />
+    <parent
+      link="r3" />
+    <child
+      link="r4" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="r5">
+    <inertial>
+      <origin
+        xyz="0.00377652420652198 5.89912261424463E-05 -0.120093820267261"
+        rpy="0 0 0" />
+      <mass
+        value="0.279987571874506" />
+      <inertia
+        ixx="0.00314925307132929"
+        ixy="9.31298020785134E-07"
+        ixz="-1.15177905028324E-05"
+        iyy="0.00320414061497404"
+        iyz="1.23010838345355E-06"
+        izz="0.000152971970257816" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shuangzu/meshes/r5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shuangzu/meshes/r5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r5"
+    type="continuous">
+    <origin
+      xyz="0 0 -0.360000000000043"
+      rpy="0 0 0" />
+    <parent
+      link="r4" />
+    <child
+      link="r5" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="r6">
+    <inertial>
+      <origin
+        xyz="1.75712083771984E-11 4.40298492110358E-11 -1.54321000422897E-14"
+        rpy="0 0 0" />
+      <mass
+        value="0.0103794627853151" />
+      <inertia
+        ixx="6.63795299486449E-07"
+        ixy="-2.1487868388165E-18"
+        ixz="-7.47956157400218E-15"
+        iyy="5.71433491493733E-07"
+        iyz="3.38381052516315E-15"
+        izz="5.42796866504315E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shuangzu/meshes/r6.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shuangzu/meshes/r6.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r6"
+    type="continuous">
+    <origin
+      xyz="0 0 -0.33999999999998"
+      rpy="0 0 0" />
+    <parent
+      link="r5" />
+    <child
+      link="r6" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="r7">
+    <inertial>
+      <origin
+        xyz="0.0184463901122061 -1.03759343936249E-07 -0.0277803799872313"
+        rpy="0 0 0" />
+      <mass
+        value="0.165596216808301" />
+      <inertia
+        ixx="4.94257801002141E-05"
+        ixy="1.40978954239748E-09"
+        ixz="1.44935636843648E-05"
+        iyy="0.000565536359670237"
+        iyz="-1.07866475611434E-11"
+        izz="0.00060782280753018" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shuangzu/meshes/r7.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shuangzu/meshes/r7.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r7"
+    type="continuous">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="r6" />
+    <child
+      link="r7" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="l1">
+    <inertial>
+      <origin
+        xyz="-0.0301036420831967 0.000198392313791179 -5.24274804167123E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.232040897144942" />
+      <inertia
+        ixx="0.000313426417045909"
+        ixy="1.40235014790346E-06"
+        ixz="-4.53450481784878E-07"
+        iyy="0.000251851829715391"
+        iyz="-5.33653683415869E-08"
+        izz="0.000248038143153795" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shuangzu/meshes/l1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shuangzu/meshes/l1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l1"
+    type="fixed">
+    <origin
+      xyz="-0.048 0.105 -0.0575"
+      rpy="0 0 0" />
+    <parent
+      link="base" />
+    <child
+      link="l1" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="l2">
+    <inertial>
+      <origin
+        xyz="0.0271385156932826 1.98573144249981E-05 0.000942883331069348"
+        rpy="0 0 0" />
+      <mass
+        value="0.326596678051437" />
+      <inertia
+        ixx="0.000334468423049104"
+        ixy="1.69961220084411E-08"
+        ixz="8.59075464034959E-06"
+        iyy="0.000224746585597578"
+        iyz="-1.82817339296806E-07"
+        izz="0.000297958447124488" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shuangzu/meshes/l2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shuangzu/meshes/l2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l2"
+    type="continuous">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="l1" />
+    <child
+      link="l2" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="l3">
+    <inertial>
+      <origin
+        xyz="0.000704399854483576 0.0436142508316247 -0.0792544920091012"
+        rpy="0 0 0" />
+      <mass
+        value="0.526481000462042" />
+      <inertia
+        ixx="0.00144088199316712"
+        ixy="6.21234645518684E-07"
+        ixz="7.99020696509431E-06"
+        iyy="0.00237769185100351"
+        iyz="5.65395580323391E-05"
+        izz="0.00133201088633625" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shuangzu/meshes/l3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shuangzu/meshes/l3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l3"
+    type="continuous">
+    <origin
+      xyz="0.048 0 -0.0414999999999999"
+      rpy="0 0 0" />
+    <parent
+      link="l2" />
+    <child
+      link="l3" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="l4">
+    <inertial>
+      <origin
+        xyz="0.00414763780808551 -0.0147428014423457 -0.11558933708508"
+        rpy="0 0 0" />
+      <mass
+        value="1.06208801950349" />
+      <inertia
+        ixx="0.00921850144403348"
+        ixy="3.88973107711364E-06"
+        ixz="0.000237154047747949"
+        iyy="0.0110621194920457"
+        iyz="-1.90748584400272E-05"
+        izz="0.0021744873362096" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shuangzu/meshes/l4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shuangzu/meshes/l4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l4"
+    type="continuous">
+    <origin
+      xyz="0 0 -0.089"
+      rpy="0 0 0" />
+    <parent
+      link="l3" />
+    <child
+      link="l4" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="l5">
+    <inertial>
+      <origin
+        xyz="0.00377646730007429 -5.91795026710917E-05 -0.120093739562266"
+        rpy="0 0 0" />
+      <mass
+        value="0.27998509383312" />
+      <inertia
+        ixx="0.00314922498852536"
+        ixy="-9.31108341586273E-07"
+        ixz="-1.15168042419474E-05"
+        iyy="0.00320411217151625"
+        iyz="-1.23290146095289E-06"
+        izz="0.000152971489618383" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shuangzu/meshes/l5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shuangzu/meshes/l5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l5"
+    type="continuous">
+    <origin
+      xyz="0 0 -0.36"
+      rpy="0 0 0" />
+    <parent
+      link="l4" />
+    <child
+      link="l5" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="l6">
+    <inertial>
+      <origin
+        xyz="1.74801562113913E-11 4.38039049477368E-11 -1.45439216225896E-14"
+        rpy="0 0 0" />
+      <mass
+        value="0.0104330646053872" />
+      <inertia
+        ixx="6.62625590241048E-07"
+        ixy="-2.14872757193854E-18"
+        ixz="-7.47956186920593E-15"
+        iyy="5.71110779837935E-07"
+        iyz="3.38380983434854E-15"
+        izz="5.43895457465483E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shuangzu/meshes/l6.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shuangzu/meshes/l6.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l6"
+    type="continuous">
+    <origin
+      xyz="0 0 -0.34"
+      rpy="0 0 0" />
+    <parent
+      link="l5" />
+    <child
+      link="l6" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="l7">
+    <inertial>
+      <origin
+        xyz="0.0184463901122054 -1.03759345823629E-07 -0.0277803799872306"
+        rpy="0 0 0" />
+      <mass
+        value="0.165596216808305" />
+      <inertia
+        ixx="4.94257801002141E-05"
+        ixy="1.40978954394495E-09"
+        ixz="1.4493563684353E-05"
+        iyy="0.000565536359670249"
+        iyz="-1.0786647427788E-11"
+        izz="0.000607822807530194" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shuangzu/meshes/l7.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shuangzu/meshes/l7.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l7"
+    type="continuous">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="l6" />
+    <child
+      link="l7" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="y3">
+    <inertial>
+      <origin
+        xyz="-0.0103877446698924 -0.00169482197607244 0.0224711261747824"
+        rpy="0 0 0" />
+      <mass
+        value="0.378859790655217" />
+      <inertia
+        ixx="0.000196920333823698"
+        ixy="2.29947056309008E-08"
+        ixz="2.57003820340561E-05"
+        iyy="0.000354992150619213"
+        iyz="2.18439060604652E-09"
+        izz="0.000383675293756589" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shuangzu/meshes/y3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shuangzu/meshes/y3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="y3"
+    type="continuous">
+    <origin
+      xyz="0 0 0.0065"
+      rpy="0 0 0" />
+    <parent
+      link="base" />
+    <child
+      link="y3" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="y2">
+    <inertial>
+      <origin
+        xyz="0.000730865220471333 0.0389221533986648 0.0424741532376085"
+        rpy="0 0 0" />
+      <mass
+        value="1.06651411745802" />
+      <inertia
+        ixx="0.00170920844338619"
+        ixy="-9.53936587261625E-07"
+        ixz="-2.29683399245105E-05"
+        iyy="0.00170920852243051"
+        iyz="-2.23190251568011E-05"
+        izz="0.000949230263322979" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shuangzu/meshes/y2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shuangzu/meshes/y2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="y2"
+    type="continuous">
+    <origin
+      xyz="0 -0.03965 0.055"
+      rpy="0 0 0" />
+    <parent
+      link="y3" />
+    <child
+      link="y2" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="y1">
+    <inertial>
+      <origin
+        xyz="-0.0358842798404646 2.52681029520771E-08 0.0322002054998561"
+        rpy="0 0 0" />
+      <mass
+        value="0.317200265167752" />
+      <inertia
+        ixx="0.000288353987458461"
+        ixy="-3.09183741753181E-10"
+        ixz="-4.90364232482033E-06"
+        iyy="0.000147643553339569"
+        iyz="-5.49370727313507E-11"
+        izz="0.000291747962104004" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shuangzu/meshes/y1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shuangzu/meshes/y1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="y1"
+    type="continuous">
+    <origin
+      xyz="0.03965 0.03965 0.085"
+      rpy="0 0 0" />
+    <parent
+      link="y2" />
+    <child
+      link="y1" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="b1">
+    <inertial>
+      <origin
+        xyz="7.92691282817948E-06 -3.04447919602459E-06 -0.0257869523817592"
+        rpy="0 0 0" />
+      <mass
+        value="1.24876667380925" />
+      <inertia
+        ixx="0.00702829365638695"
+        ixy="-1.06002865290744E-08"
+        ixz="2.79573307448755E-07"
+        iyy="0.0046476770681902"
+        iyz="4.71755575162991E-08"
+        izz="0.00260507642530545" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shuangzu/meshes/b1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shuangzu/meshes/b1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="b1"
+    type="fixed">
+    <origin
+      xyz="-0.0396499999999999 0 0.19760320787506"
+      rpy="0 0 0" />
+    <parent
+      link="y1" />
+    <child
+      link="b1" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="t2">
+    <inertial>
+      <origin
+        xyz="0.00129639745850704 -6.90335275371662E-06 0.0562356571680652"
+        rpy="0 0 0" />
+      <mass
+        value="0.0717307740900375" />
+      <inertia
+        ixx="4.73353658590804E-05"
+        ixy="-5.91807559535377E-09"
+        ixz="-6.33450971236837E-06"
+        iyy="5.07364008060536E-05"
+        iyz="-3.00118139374364E-08"
+        izz="2.89261642135794E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shuangzu/meshes/t2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shuangzu/meshes/t2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="t2"
+    type="continuous">
+    <origin
+      xyz="0 0 0.146926485797641"
+      rpy="0 0 0" />
+    <parent
+      link="b1" />
+    <child
+      link="t2" />
+    <axis
+      xyz="1.22100046029846E-05 6.83490816100197E-05 -0.99999999758966" />
+  </joint>
+  <link
+    name="t3">
+    <inertial>
+      <origin
+        xyz="0.0208602830188793 0.00299722647652911 -0.00194684636830333"
+        rpy="0 0 0" />
+      <mass
+        value="0.0189573884547462" />
+      <inertia
+        ixx="3.07261030820476E-06"
+        ixy="4.10292482212116E-08"
+        ixz="1.78312348194346E-08"
+        iyy="5.66077119750909E-06"
+        iyz="-1.51705009052139E-08"
+        izz="3.71878352775285E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shuangzu/meshes/t3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shuangzu/meshes/t3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="t3"
+    type="continuous">
+    <origin
+      xyz="-0.0214014957239914 0 0.122499738858556"
+      rpy="0 0 0" />
+    <parent
+      link="t2" />
+    <child
+      link="t3" />
+    <axis
+      xyz="0.999999999925458 0 1.22100046327929E-05" />
+  </joint>
+  <link
+    name="t4">
+    <inertial>
+      <origin
+        xyz="-2.31666208813652E-07 0.0210814390130442 0.0189749154507305"
+        rpy="0 0 0" />
+      <mass
+        value="0.0106256456570579" />
+      <inertia
+        ixx="7.50496890616553E-06"
+        ixy="4.71785743714698E-12"
+        ixz="2.45834795724495E-11"
+        iyy="3.56996332972273E-06"
+        iyz="-3.86661746522974E-07"
+        izz="5.49155423513383E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shuangzu/meshes/t4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shuangzu/meshes/t4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="t4"
+    type="continuous">
+    <origin
+      xyz="0.0213999999984297 -0.0229999999638927 0"
+      rpy="0 0 0" />
+    <parent
+      link="t3" />
+    <child
+      link="t4" />
+    <axis
+      xyz="0 -0.999999997651641 -6.85326001671701E-05" />
+  </joint>
+  <link
+    name="you1">
+    <inertial>
+      <origin
+        xyz="0.0036700922631097 -0.0488666449589421 0.000107998542672794"
+        rpy="0 0 0" />
+      <mass
+        value="0.138901030071088" />
+      <inertia
+        ixx="0.000103808867528534"
+        ixy="-8.19869640870126E-07"
+        ixz="-3.52122869150508E-09"
+        iyy="6.52537065207634E-05"
+        iyz="-1.92352620841552E-07"
+        izz="7.01898002839871E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shuangzu/meshes/you1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shuangzu/meshes/you1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="you1"
+    type="continuous">
+    <origin
+      xyz="0 -0.126623540935121 0.0196556700072115"
+      rpy="-0.43633231299858 0 0" />
+    <parent
+      link="b1" />
+    <child
+      link="you1" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="you2">
+    <inertial>
+      <origin
+        xyz="-0.0215284265690647 -0.0790264379260739 0.0329057653204849"
+        rpy="0 0 0" />
+      <mass
+        value="0.104284339631169" />
+      <inertia
+        ixx="8.40688944061449E-05"
+        ixy="-1.19277410107821E-05"
+        ixz="7.00451807574459E-06"
+        iyy="6.16020173666546E-05"
+        iyz="1.78549570493127E-05"
+        izz="7.03136999299099E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shuangzu/meshes/you2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shuangzu/meshes/you2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="you2"
+    type="continuous">
+    <origin
+      xyz="0.0319999999999985 -0.0669999999999986 0"
+      rpy="2.00712863979348 0 0" />
+    <parent
+      link="you1" />
+    <child
+      link="you2" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="you3">
+    <inertial>
+      <origin
+        xyz="-0.00121518491646118 -0.0644933341890206 0.000429301912347774"
+        rpy="0 0 0" />
+      <mass
+        value="0.0902413045902292" />
+      <inertia
+        ixx="3.60931203883049E-05"
+        ixy="-1.60221090907321E-06"
+        ixz="2.72605131244845E-07"
+        iyy="2.65424167788413E-05"
+        iyz="3.71902372003803E-07"
+        izz="4.24331720212063E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shuangzu/meshes/you3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shuangzu/meshes/you3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="you3"
+    type="continuous">
+    <origin
+      xyz="-0.0320000000002931 -0.136530330300864 0.0399999999991598"
+      rpy="0 0 0" />
+    <parent
+      link="you2" />
+    <child
+      link="you3" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="you4">
+    <inertial>
+      <origin
+        xyz="-4.65847080224069E-05 -0.0777426730929448 -0.019141394544036"
+        rpy="0 0 0" />
+      <mass
+        value="0.0817996589924287" />
+      <inertia
+        ixx="4.04747507013115E-05"
+        ixy="-4.63710145179833E-08"
+        ixz="1.06340201541558E-08"
+        iyy="3.74872694143861E-05"
+        iyz="-9.62055315213358E-07"
+        izz="3.69751249401381E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shuangzu/meshes/you4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shuangzu/meshes/you4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="you4"
+    type="continuous">
+    <origin
+      xyz="0 -0.109999999996644 0.0225303303019291"
+      rpy="0 0 0" />
+    <parent
+      link="you3" />
+    <child
+      link="you4" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="you5">
+    <inertial>
+      <origin
+        xyz="-3.08303016584299E-06 -0.0562355440691004 -0.00129709426038702"
+        rpy="0 0 0" />
+      <mass
+        value="0.0717303443147702" />
+      <inertia
+        ixx="5.07362231761235E-05"
+        ixy="3.15275919310361E-08"
+        ixz="6.32688143866541E-09"
+        iyy="2.89260648266572E-05"
+        iyz="-6.33471069367177E-06"
+        izz="4.73350692607268E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shuangzu/meshes/you5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shuangzu/meshes/you5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="you5"
+    type="continuous">
+    <origin
+      xyz="0 -0.119029693672666 -0.0225001678683308"
+      rpy="-1.22100046105742E-05 0 -6.83496138025266E-05" />
+    <parent
+      link="you4" />
+    <child
+      link="you5" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="you6">
+    <inertial>
+      <origin
+        xyz="0.00299707899926017 0.00194731271505322 -0.0208602510957352"
+        rpy="0 0 0" />
+      <mass
+        value="0.0189573816725559" />
+      <inertia
+        ixx="5.66076603591854E-06"
+        ixy="1.53042772328206E-08"
+        ixz="-4.10291799574799E-08"
+        iyy="3.71878329414308E-06"
+        iyz="1.78375413620499E-08"
+        izz="3.07261002498796E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shuangzu/meshes/you6.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shuangzu/meshes/you6.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="you6"
+    type="continuous">
+    <origin
+      xyz="0 -0.12250000044792 0.0214000000000172"
+      rpy="0 0 0" />
+    <parent
+      link="you5" />
+    <child
+      link="you6" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="you7">
+    <inertial>
+      <origin
+        xyz="0.0210827393638313 -0.0189734706417542 -1.75956749171036E-11"
+        rpy="0 0 0" />
+      <mass
+        value="0.0106256456570579" />
+      <inertia
+        ixx="3.5699103408783E-06"
+        ixy="3.86530051298801E-07"
+        ixz="3.28420651937783E-15"
+        iyy="5.49160722367813E-06"
+        iyz="-3.22599782476166E-16"
+        izz="7.50496890646572E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shuangzu/meshes/you7.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shuangzu/meshes/you7.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="you7"
+    type="continuous">
+    <origin
+      xyz="-0.023000000000045 0 -0.0213999999999737"
+      rpy="0 0 0" />
+    <parent
+      link="you6" />
+    <child
+      link="you7" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="zuo1">
+    <inertial>
+      <origin
+        xyz="0.0036701217535928 0.0488666031316165 0.000107990998180929"
+        rpy="0 0 0" />
+      <mass
+        value="0.138900705041709" />
+      <inertia
+        ixx="0.000103808738797151"
+        ixy="8.19874342128453E-07"
+        ixz="-3.54759500493616E-09"
+        iyy="6.5253115658422E-05"
+        iyz="1.9211348790481E-07"
+        izz="7.01901736812176E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shuangzu/meshes/zuo1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shuangzu/meshes/zuo1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="zuo1"
+    type="continuous">
+    <origin
+      xyz="0 0.126623540681031 0.0196556705521279"
+      rpy="0.436332320793253 0 0" />
+    <parent
+      link="b1" />
+    <child
+      link="zuo1" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="zuo2">
+    <inertial>
+      <origin
+        xyz="-0.0207474771893229 0.0750966750354405 0.0324215148118897"
+        rpy="0 0 0" />
+      <mass
+        value="0.0976206967668802" />
+      <inertia
+        ixx="8.19729879928158E-05"
+        ixy="1.18961196799853E-05"
+        ixz="7.00466282344974E-06"
+        iyy="5.72415120953693E-05"
+        iyz="-1.78552915765522E-05"
+        izz="6.80095239918612E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shuangzu/meshes/zuo2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shuangzu/meshes/zuo2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="zuo2"
+    type="continuous">
+    <origin
+      xyz="0.031999983030471 0.0670000081048653 0"
+      rpy="-2.00712863979338 0 0" />
+    <parent
+      link="zuo1" />
+    <child
+      link="zuo2" />
+    <axis
+      xyz="0.999999999999976 0 0" />
+  </joint>
+  <link
+    name="zuo3">
+    <inertial>
+      <origin
+        xyz="-0.0011795365957861 0.0658373332147335 0.000842964421217313"
+        rpy="0 0 0" />
+      <mass
+        value="0.0929848729488042" />
+      <inertia
+        ixx="3.64880709866085E-05"
+        ixy="1.6003859525544E-06"
+        ixz="2.72247516945938E-07"
+        iyy="2.69477417875218E-05"
+        iyz="-3.70584989143248E-07"
+        izz="4.3210038311384E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shuangzu/meshes/zuo3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shuangzu/meshes/zuo3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="zuo3"
+    type="continuous">
+    <origin
+      xyz="-0.0320000087093567 0.13653033030089 0.0399999930319231"
+      rpy="0 0 0" />
+    <parent
+      link="zuo2" />
+    <child
+      link="zuo3" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="zuo4">
+    <inertial>
+      <origin
+        xyz="-4.66212734396565E-05 0.0777426558215338 -0.0191413954242534"
+        rpy="0 0 0" />
+      <mass
+        value="0.0817996382211634" />
+      <inertia
+        ixx="4.04747683810494E-05"
+        ixy="4.61827601262275E-08"
+        ixz="1.06298317282275E-08"
+        iyy="3.74872672753485E-05"
+        iyz="9.62055212092618E-07"
+        izz="3.69751049341209E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shuangzu/meshes/zuo4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shuangzu/meshes/zuo4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="zuo4"
+    type="continuous">
+    <origin
+      xyz="0 0.109999999996649 0.0225303303019319"
+      rpy="0 0 0" />
+    <parent
+      link="zuo3" />
+    <child
+      link="zuo4" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="zuo5">
+    <inertial>
+      <origin
+        xyz="-9.11169583539539E-06 0.0565349412796278 -0.00204407133962659"
+        rpy="0 0 0" />
+      <mass
+        value="0.0693651964987488" />
+      <inertia
+        ixx="5.05689428539516E-05"
+        ixy="3.15259087403706E-08"
+        ixz="-6.32089839192504E-09"
+        iyy="2.86845991793803E-05"
+        iyz="6.33470719252662E-06"
+        izz="4.6935864367159E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shuangzu/meshes/zuo5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shuangzu/meshes/zuo5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="zuo5"
+    type="continuous">
+    <origin
+      xyz="0 0.119029693673247 -0.0225001718767759"
+      rpy="1.22191583977987E-05 0 6.88165313456609E-05" />
+    <parent
+      link="zuo4" />
+    <child
+      link="zuo5" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="zuo6">
+    <inertial>
+      <origin
+        xyz="-0.00296056661575334 -0.00194706157138341 -0.0208136823203121"
+        rpy="0 0 0" />
+      <mass
+        value="0.0189069109697634" />
+      <inertia
+        ixx="5.66036588082625E-06"
+        ixy="1.54347404744482E-08"
+        ixz="4.10256634508404E-08"
+        iyy="3.71873196656794E-06"
+        iyz="-1.78342103847146E-08"
+        izz="3.07220201595601E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shuangzu/meshes/zuo6.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shuangzu/meshes/zuo6.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="zuo6"
+    type="continuous">
+    <origin
+      xyz="0 0.122500000447922 0.0214000000000155"
+      rpy="0 0 -6.88165313508023E-05" />
+    <parent
+      link="zuo5" />
+    <child
+      link="zuo6" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="zuo7">
+    <inertial>
+      <origin
+        xyz="-0.02108273936383 0.0189734706417543 -7.22835080679829E-09"
+        rpy="0 0 0" />
+      <mass
+        value="0.0106256456570579" />
+      <inertia
+        ixx="3.56991034087875E-06"
+        ixy="3.86530051298782E-07"
+        ixz="-1.34915976386072E-12"
+        iyy="5.49160722367815E-06"
+        iyz="1.32524280020167E-13"
+        izz="7.50496890646525E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shuangzu/meshes/zuo7.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shuangzu/meshes/zuo7.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="zuo7"
+    type="continuous">
+    <origin
+      xyz="0.0229999999454974 0 -0.021400000000012"
+      rpy="0 0 6.88165313172141E-05" />
+    <parent
+      link="zuo6" />
+    <child
+      link="zuo7" />
+    <axis
+      xyz="0.999999999999941 0 0" />
+  </joint>
+</robot>
